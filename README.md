@@ -1,7 +1,7 @@
 # 📊 FinancialRAG — SEC Filing Intelligence Platform
 
 A production-grade RAG (Retrieval-Augmented Generation) system for analyzing SEC 10-K filings.
-Ask questions, generate summaries, extract financial metrics, and compare companies — all grounded in real documents.
+Ask questions, generate summaries, extract financial metrics, and compare companies - all grounded in real documents.
 
 ---
 
@@ -215,16 +215,6 @@ financial-rag/
 
 ---
 
-## Deploy to Streamlit Cloud
-
-1. Push to GitHub
-2. Go to [share.streamlit.io](https://share.streamlit.io)
-3. Connect repo → set main file: `app/streamlit_app.py`
-4. Add secret: `ANTHROPIC_API_KEY = sk-ant-...`
-5. Deploy — users upload their own PDFs via sidebar
-
----
-
 ## Supported Companies (SEC EDGAR)
 
 | Company | Ticker | CIK |
@@ -232,9 +222,3 @@ financial-rag/
 | Apple | AAPL | 0000320193 |
 | Tesla | TSLA | 0001318605 |
 | Microsoft | MSFT | 0000789019 |
-| Amazon | AMZN | 0001018724 |
-| Alphabet | GOOGL | 0001652044 |
-| NVIDIA | NVDA | 0001045810 |
-| Meta | META | 0001326801 |
-
-Add more by editing `COMPANY_CIKS` in `src/ingestion/downloader.py`.
