@@ -1,0 +1,120 @@
+{
+  "answer": "The provided documents don't contain specific information about Apple's future plans or strategic direction. \n\nThe documents do include a forward-looking statements disclaimer from Apple's fiscal 2024 10-K filing, which states: \"This Annual Report contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements involve known and unknown risks, uncertai[nties]\" [Source 5], but the actual forward-looking content is cut off in the provided context.\n\nThe documents focus primarily on Apple's current business description, product lines, and fiscal 2024 financial performance rather than future outlook or strategic initiatives.",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.7710368633270264,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.5536990761756897,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0006",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "petitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Failure to execute on AI strategy could result in market share loss and revenue underperformance.\n\nCybersecurity Risk: In January 2024, the Company disclosed that a Russian state-sponsored threat actor known as Midnight Blizzard gained unauthorized access to a small percentage of Microsoft corporate email accounts. The Company has undertaken significant remediation efforts. Future cybersecurity incidents could damage the Company's reputation and result in significant financial loss.\n\nRegulatory Ri",
+      "section": "General",
+      "score": 0.37642645835876465,
+      "chunk_index": 6,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0002",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on Apple silicon. Mac net sales were $29.8 billion in fiscal 2024, compared to $29.4 billion in fiscal 2023.\n\niPad includes iPad Pro, iPad Air, iPad, and iPad mini. iPad net sales were $26.7 billion in fiscal 2024, compared to $28.3 billion in fiscal 2023.\n\nWearables, Home and Accessories includes Apple Watch, AirPods, Beats products, Apple TV, and accessories. Net sales were $37.0 billion in fiscal 2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud serv",
+      "section": "General",
+      "score": 0.26533907651901245,
+      "chunk_index": 2,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0012",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Restrictions on trade, travel bans, or regulatory actions by Chinese authorities could materially impact revenues.\n\nITEM 13. EXECUTIVE COMPENSATION\n\nTotal compensation for CEO Timothy D. Cook in fiscal 2024 was approximately $74.6 million, consisting of base salary of $3.0 million, annual cash incentive of $8.1 million, and long-term equity awards of approximately $63.5 million.\n\nFORWARD-LOOKING STATEMENTS\n\nThis Annual Report contains forward-looking statements within the meaning of the Private Securities Litigation Reform Act of 1995. These statements involve known and unknown risks, uncertai",
+      "section": "General",
+      "score": 0.2474443018436432,
+      "chunk_index": 12,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.204,
+    "coverage_score": 0.4,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.416,
+    "overall_confidence": 0.501,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.77) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.771,
+        "answer_overlap": 0.158,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5537,
+        "answer_overlap": 0.061,
+        "contributed": false
+      },
+      {
+        "chunk_id": "microsoft_2024__0006",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3764,
+        "answer_overlap": 0.076,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0002",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2653,
+        "answer_overlap": 0.071,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0012",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2474,
+        "answer_overlap": 0.369,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 4045.3,
+  "mode": "qa"
+}

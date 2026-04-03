@@ -1,0 +1,154 @@
+{
+  "answer": "Based on the provided SEC filings, here's a comparison of R&D investment and innovation:\n\n## Key Similarities\n\nBoth companies made significant R&D investments in fiscal 2024, though the documents show different focuses - Microsoft heavily investing in AI and cloud infrastructure, while Apple's specific R&D figures aren't detailed in the provided context.\n\n## Key Differences (with figures)\n\n**Microsoft 2024 [Source: microsoft_2024]:**\n- Research and development expenses: **$29.5 billion** in fiscal 2024, compared to $27.2 billion in fiscal 2023\n- Capital expenditures: **$55.7 billion** in fiscal 2024, primarily for cloud and AI infrastructure including data center construction, servers, and networking equipment\n- OpenAI investment: Approximately **$13 billion** invested in OpenAI with exclusive cloud partnership\n- Clear focus on AI innovation with Microsoft 365 Copilot launched broadly in November 2023\n\n**Apple 2024 [Source: apple_2024]:**\n- The provided documents don't contain specific R&D investment figures for Apple\n- Total net sales: **$391.0 billion** for fiscal 2024 (significantly higher than Microsoft's revenue base)\n- Gross margin: **46.2%** in fiscal 2024, up from 44.1% in fiscal 2023\n\n## Which Appears Stronger\n\nBased solely on the information provided, **Microsoft appears to have a more aggressive and clearly articulated R&D and innovation strategy**. Microsoft shows:\n- Substantial year-over-year R&D growth ($29.5B vs $27.2B)\n- Massive capital investment ($55.7B) specifically targeting emerging technologies\n- Strategic partnerships (OpenAI) with significant financial commitment ($13B)\n- Clear AI-first innovation roadmap with specific products like Copilot\n\nHowever, this assessment is limited because the provided Apple documents don't contain comparable R&D investment details, making a complete comparison impossible.",
+  "sources_a": [
+    {
+      "chunk_id": "microsoft_2024__0014",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "e than any other cloud provider. Microsoft AI supercomputing infrastructure powers OpenAI training and inference at scale, as well as Microsoft's own Copilot services.\n\nCapital expenditures for fiscal 2024 were $55.7 billion, primarily for cloud and AI infrastructure including data center construction, servers, and networking equipment. The Company expects to continue significant capital investment to support AI and cloud growth.\n\nCOPILOT ECOSYSTEM\n\nMicrosoft 365 Copilot, launched broadly in November 2023, is available to enterprise customers at $30 per user per month. Early adoption has been",
+      "section": "General",
+      "score": 0.5035647749900818,
+      "chunk_index": 14,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0011",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "h and development expenses were $29.5 billion in fiscal 2024, compared to $27.2 billion in fiscal 2023, reflecting continued investment in AI, cloud infrastructure, and next-generation product capabilities.\n\nCAPITAL RETURN PROGRAM\n\nDuring fiscal 2024, the Company returned $34.6 billion to shareholders through share repurchases and dividends. The Company paid dividends of $3.00 per share in fiscal 2024. The Board of Directors approved a new share repurchase program of $60 billion in September 2023.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED INCOME STATEMENTS\n(In millions, except per share amou",
+      "section": "General",
+      "score": 0.4911912977695465,
+      "chunk_index": 11,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0000",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "Microsoft Corporation 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nMicrosoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.\n\nMicrosoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerl",
+      "section": "General",
+      "score": 0.2657940685749054,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0008",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "ompany has invested approximately $13 billion in OpenAI and has an exclusive cloud partnership. Changes in the OpenAI partnership, including governance changes or competitive responses from OpenAI, could adversely impact the Company's AI strategy and Azure growth.\n\nEconomic Sensitivity: A meaningful portion of the Company's revenue is derived from enterprise software subscriptions and cloud services. An economic downturn could cause customers to reduce IT spending, impacting renewal rates and new customer acquisition.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights",
+      "section": "General",
+      "score": 0.21521303057670593,
+      "chunk_index": 8,
+      "total_chunks": 50
+    }
+  ],
+  "sources_b": [
+    {
+      "chunk_id": "apple_2024__0008",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": ".7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margin percentage was primarily due to an improved mix driven by Services growth and favorable product mix.\n\nLIQUIDITY AND CAPITAL RESOURCES\n\nThe Company believes its existing balances of cash and cash equivalents and short-term investments, together with cash generated by operations and access to credit markets, will be sufficient to satisfy its cash requirements and capital return program over the next twelve months.\n\nCash and cash equivalents and current and non-current marketable securities total",
+      "section": "General",
+      "score": 0.31373071670532227,
+      "chunk_index": 8,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0004",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "e Company's business and financial condition are sensitive to global and regional macroeconomic conditions, including inflation, interest rates, and consumer spending trends. Uncertain or weak economic conditions may harm the Company's business and results of operations.\n\nCompetition Risk: The markets for the Company's products and services are highly competitive, and the Company is subject to intense competition in all areas of its business. The Company faces competition from vertically integrated competitors that may have better access to key components, lower cost structures, or alternative",
+      "section": "General",
+      "score": 0.2344406694173813,
+      "chunk_index": 4,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0006",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "f others. The Company regularly receives notices from third parties alleging patent or other intellectual property infringement.\n\nRegulatory Risk: The Company is subject to complex and changing laws and regulations worldwide, including those related to privacy, data protection, content, antitrust, and tax. Compliance with these requirements creates significant costs and may reduce the Company's flexibility.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights\n\nTotal net sales for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of ap",
+      "section": "General",
+      "score": 0.2224012017250061,
+      "chunk_index": 6,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.03,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.421,
+    "overall_confidence": 0.37,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.50) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0014",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.5036,
+        "answer_overlap": 0.303,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0011",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.4912,
+        "answer_overlap": 0.136,
+        "contributed": false
+      },
+      {
+        "chunk_id": "microsoft_2024__0000",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.2658,
+        "answer_overlap": 0.068,
+        "contributed": false
+      },
+      {
+        "chunk_id": "microsoft_2024__0008",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.2152,
+        "answer_overlap": 0.169,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0008",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3137,
+        "answer_overlap": 0.142,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0004",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2344,
+        "answer_overlap": 0.053,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0006",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2224,
+        "answer_overlap": 0.129,
+        "contributed": false
+      }
+    ]
+  },
+  "cached": false,
+  "latency_ms": 9095.6,
+  "mode": "compare"
+}

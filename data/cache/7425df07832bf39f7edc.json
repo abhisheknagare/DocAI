@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided documents, Apple Inc.'s business segments in fiscal 2024 include:\n\n**Product Segments:**\n- **iPhone** - Apple's line of smartphones based on iOS operating system, with net sales of \"$201.0 billion\" in fiscal 2024, \"representing approximately 52% of total net sales\" [Source 2]\n\n- **Mac** - Includes desktops and notebooks based on Apple silicon, with net sales of \"$29.8 billion in fiscal 2024\" [Source 4]\n\n- **iPad** - Includes iPad Pro, iPad Air, iPad, and iPad mini, with net sales of \"$26.7 billion in fiscal 2024\" [Source 4]\n\n- **Wearables, Home and Accessories** - Includes Apple Watch, AirPods, Beats products, Apple TV, and accessories, with net sales of \"$37.0 billion in fiscal 2024\" [Source 4]\n\n**Services Segment:**\n- **Services** - The documents mention this includes \"advertising, AppleCare, cloud serv[ices]\" [Source 4], and note that fiscal 2024 growth \"was primarily driven by strong performance in our Services segment\" [Source 3]\n\nThe documents show Apple's total net revenues for fiscal 2024 were \"$391.0 billion\" [Source 3].",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.6601382493972778,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.46944934129714966,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0007",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "es for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of approximately 2%. This growth was primarily driven by strong performance in our Services segment.\n\nTotal operating expenses for fiscal 2024 were $53.9 billion, compared to $54.8 billion in fiscal 2023.\n\nNet income for fiscal 2024 was $93.7 billion, compared to $97.0 billion in fiscal 2023. Diluted earnings per share were $6.08, compared to $6.13 in fiscal 2023.\n\nGross margin for fiscal 2024 was $180.7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margi",
+      "section": "General",
+      "score": 0.46588134765625,
+      "chunk_index": 7,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0002",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on Apple silicon. Mac net sales were $29.8 billion in fiscal 2024, compared to $29.4 billion in fiscal 2023.\n\niPad includes iPad Pro, iPad Air, iPad, and iPad mini. iPad net sales were $26.7 billion in fiscal 2024, compared to $28.3 billion in fiscal 2023.\n\nWearables, Home and Accessories includes Apple Watch, AirPods, Beats products, Apple TV, and accessories. Net sales were $37.0 billion in fiscal 2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud serv",
+      "section": "General",
+      "score": 0.416903018951416,
+      "chunk_index": 2,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0010",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "nt in gross margin was primarily driven by the higher mix of cloud services revenue and economies of scale in cloud infrastructure.\n\nOperating income was $109.4 billion in fiscal 2024, compared to $88.5 billion in fiscal 2023, an increase of 24%. Operating margin expanded to 44.6% from 41.8% in fiscal 2023.\n\nNet income for fiscal 2024 was $88.1 billion, compared to $72.4 billion in fiscal 2023, an increase of 22%. Diluted earnings per share were $11.80, compared to $9.65 in fiscal 2023.\n\nResearch and development expenses were $29.5 billion in fiscal 2024, compared to $27.2 billion in fiscal 20",
+      "section": "General",
+      "score": 0.3074902892112732,
+      "chunk_index": 10,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.234,
+    "coverage_score": 0.2,
+    "groundedness_score": 0.861,
+    "consistency_score": 0.972,
+    "overall_confidence": 0.558,
+    "verdict": "\u26a0\ufe0f Medium Confidence",
+    "explanation": "The answer is well-grounded in retrieved text, but retrieval relevance is moderate \u2014 related documents may not be perfectly indexed.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.6601,
+        "answer_overlap": 0.196,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4694,
+        "answer_overlap": 0.505,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0007",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4659,
+        "answer_overlap": 0.346,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0002",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4169,
+        "answer_overlap": 0.659,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0010",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3075,
+        "answer_overlap": 0.193,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 5244.0,
+  "mode": "qa"
+}

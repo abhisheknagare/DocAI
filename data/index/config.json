@@ -1,0 +1,12 @@
+{
+  "embedding_model": "minilm",
+  "embedding_dim": 128,
+  "index_dir": "data/index",
+  "chunk_dir": "data/processed/chunks",
+  "total_chunks": 150,
+  "documents": [
+    "tesla_2024",
+    "microsoft_2024",
+    "apple_2024"
+  ]
+}

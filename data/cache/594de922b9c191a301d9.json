@@ -1,0 +1,120 @@
+{
+  "answer": "The provided documents don't contain this information. The context only discusses Tesla Inc.'s work toward deploying unsupervised FSD capability and launching a Robotaxi service, but does not contain any information about names.",
+  "sources": [
+    {
+      "chunk_id": "tesla_2024__0017",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ompany is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.",
+      "section": "General",
+      "score": 0.3544749319553375,
+      "chunk_index": 17,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0016",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ompany is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.",
+      "section": "General",
+      "score": 0.3544749319553375,
+      "chunk_index": 16,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0015",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ompany is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.",
+      "section": "General",
+      "score": 0.3544749319553375,
+      "chunk_index": 15,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0014",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ompany is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.",
+      "section": "General",
+      "score": 0.3544749319553375,
+      "chunk_index": 14,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0013",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ompany is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.",
+      "section": "General",
+      "score": 0.3544749319553375,
+      "chunk_index": 13,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.078,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.0,
+    "overall_confidence": 0.321,
+    "verdict": "\u274c Very Low Confidence",
+    "explanation": "Very poor retrieval quality or minimal grounding in source text. This answer should not be relied upon without manual verification.",
+    "chunk_scores": [
+      {
+        "chunk_id": "tesla_2024__0017",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3545,
+        "answer_overlap": 0.533,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0016",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3545,
+        "answer_overlap": 0.533,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0015",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3545,
+        "answer_overlap": 0.533,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0014",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3545,
+        "answer_overlap": 0.533,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0013",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3545,
+        "answer_overlap": 0.533,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 2434.2,
+  "mode": "qa"
+}

@@ -1,0 +1,101 @@
+{
+  "answer": "The provided documents don't contain specific information about Tesla's top risk factors. While [Source 2] mentions Tesla Inc.'s 10-K Annual Report for Fiscal Year 2024 and provides a brief business description, it does not include Tesla's risk factors section. The risk factors mentioned in the context (macroeconomic risks, cybersecurity risk, geopolitical risk, and competition risk from Sources 1, 3, and 4) are all related to Apple Inc., not Tesla Inc.",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0003",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud services, digital content, payment, and licensing. Services net sales were $96.2 billion in fiscal 2024, compared to $85.2 billion in fiscal 2023 \u2014 a growth of approximately 13%.\n\nITEM 1A. RISK FACTORS\n\nThe following discussion of risk factors contains forward-looking statements. These risk factors may be important to understanding any statement in this Form 10-K or elsewhere.\n\nMacroeconomic Risks: The Company's business and financial condition are sensitive to global and regional macroeconomic cond",
+      "section": "General",
+      "score": 0.5167092084884644,
+      "chunk_index": 3,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0000",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "Tesla, Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\n\nITEM 1. BUSINESS\n\nTesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, energy generation and storage systems, and related products and services. The Company also offers vehicle service, charging infrastructure, and full self-driving capability software. Tesla was incorporated in Delaware in July 2003.\n\nTesla's mission is to accelerate the world's transition to sustainable energy. To achieve this mission, the Company has designed and deployed a vertically integrated e",
+      "section": "General",
+      "score": 0.4966277480125427,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0011",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "share:\n  Basic: $6.11\n  Diluted: $6.08\n\nITEM 1A. ADDITIONAL RISK FACTORS\n\nCybersecurity Risk: The Company's products, services, and business operations are subject to cybersecurity threats including malware, ransomware, and sophisticated state-sponsored attacks that could disrupt operations or expose sensitive customer data.\n\nGeopolitical Risk: The Company's operations in China are subject to significant political, regulatory, and economic risks. China represents approximately 17% of net sales. Restrictions on trade, travel bans, or regulatory actions by Chinese authorities could materially im",
+      "section": "General",
+      "score": 0.4276374578475952,
+      "chunk_index": 11,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0004",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "e Company's business and financial condition are sensitive to global and regional macroeconomic conditions, including inflation, interest rates, and consumer spending trends. Uncertain or weak economic conditions may harm the Company's business and results of operations.\n\nCompetition Risk: The markets for the Company's products and services are highly competitive, and the Company is subject to intense competition in all areas of its business. The Company faces competition from vertically integrated competitors that may have better access to key components, lower cost structures, or alternative",
+      "section": "General",
+      "score": 0.29202187061309814,
+      "chunk_index": 4,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.19,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.545,
+    "overall_confidence": 0.436,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.52) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0003",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5167,
+        "answer_overlap": 0.187,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0000",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.4966,
+        "answer_overlap": 0.186,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0011",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4276,
+        "answer_overlap": 0.148,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0004",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.292,
+        "answer_overlap": 0.101,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 3389.7,
+  "mode": "qa"
+}

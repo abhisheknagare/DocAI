@@ -1,0 +1,120 @@
+{
+  "answer": "The provided documents don't contain information about Tesla's business segments. While [Source 1] mentions that Tesla designs, develops, manufactures, leases, and sells electric vehicles, energy generation and storage systems, and related products and services, and also offers vehicle service, charging infrastructure, and full self-driving capability software, it does not specify how Tesla organizes these activities into formal business segments for reporting purposes.",
+  "sources": [
+    {
+      "chunk_id": "tesla_2024__0000",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "Tesla, Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\n\nITEM 1. BUSINESS\n\nTesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, energy generation and storage systems, and related products and services. The Company also offers vehicle service, charging infrastructure, and full self-driving capability software. Tesla was incorporated in Delaware in July 2003.\n\nTesla's mission is to accelerate the world's transition to sustainable energy. To achieve this mission, the Company has designed and deployed a vertically integrated e",
+      "section": "General",
+      "score": 0.6649658679962158,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0000",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "Microsoft Corporation 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nMicrosoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.\n\nMicrosoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerl",
+      "section": "General",
+      "score": 0.461783766746521,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0004",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "e Company's business and financial condition are sensitive to global and regional macroeconomic conditions, including inflation, interest rates, and consumer spending trends. Uncertain or weak economic conditions may harm the Company's business and results of operations.\n\nCompetition Risk: The markets for the Company's products and services are highly competitive, and the Company is subject to intense competition in all areas of its business. The Company faces competition from vertically integrated competitors that may have better access to key components, lower cost structures, or alternative",
+      "section": "General",
+      "score": 0.30481523275375366,
+      "chunk_index": 4,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0007",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "es for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of approximately 2%. This growth was primarily driven by strong performance in our Services segment.\n\nTotal operating expenses for fiscal 2024 were $53.9 billion, compared to $54.8 billion in fiscal 2023.\n\nNet income for fiscal 2024 was $93.7 billion, compared to $97.0 billion in fiscal 2023. Diluted earnings per share were $6.08, compared to $6.13 in fiscal 2023.\n\nGross margin for fiscal 2024 was $180.7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margi",
+      "section": "General",
+      "score": 0.2205881029367447,
+      "chunk_index": 7,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0009",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "w customer acquisition.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights\n\nTotal revenue for fiscal 2024 was $245.1 billion, compared to $211.9 billion in fiscal 2023, an increase of 16%. This growth was driven by strong performance in Intelligent Cloud and continued strength in Productivity and Business Processes.\n\nTotal gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%, compared to $146.1 billion or 68.9% in fiscal 2023. The improvement in gross margin was primarily driven by the higher mix of cloud services revenue and economies of",
+      "section": "General",
+      "score": 0.14581972360610962,
+      "chunk_index": 9,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.085,
+    "coverage_score": 0.2,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.562,
+    "overall_confidence": 0.447,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.66) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "tesla_2024__0000",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.665,
+        "answer_overlap": 0.553,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0000",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.4618,
+        "answer_overlap": 0.143,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0004",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3048,
+        "answer_overlap": 0.069,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0007",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2206,
+        "answer_overlap": 0.029,
+        "contributed": false
+      },
+      {
+        "chunk_id": "microsoft_2024__0009",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.1458,
+        "answer_overlap": 0.052,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 3096.6,
+  "mode": "qa"
+}

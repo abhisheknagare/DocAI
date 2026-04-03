@@ -1,0 +1,120 @@
+{
+  "answer": "The provided documents don't contain this information.\n\nThe SEC filing excerpts provided do not include any statements or positions from environmentalists. The documents contain regulatory risk information for Microsoft Corp., automotive segment details for Tesla Inc., and forward-looking statement disclaimers for Apple Inc., but no information about what environmentalists say regarding any of these companies.",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0007",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "dents could damage the Company's reputation and result in significant financial loss.\n\nRegulatory Risk: The Company is subject to increasing regulatory scrutiny globally, including competition law investigations in Europe and the United States related to its cloud computing and AI practices. The Digital Markets Act in the European Union imposes obligations on designated gatekeepers. The Company's Activision Blizzard acquisition faced significant regulatory review.\n\nOpenAI Partnership Risk: The Company has invested approximately $13 billion in OpenAI and has an exclusive cloud partnership. Chan",
+      "section": "General",
+      "score": 0.27672719955444336,
+      "chunk_index": 7,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0001",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ble energy. To achieve this mission, the Company has designed and deployed a vertically integrated energy and transportation ecosystem.\n\nAUTOMOTIVE SEGMENT\n\nThe Company's automotive segment includes the design, development, manufacturing, leasing, and sale of electric vehicles. The Company currently manufactures the Model 3, Model Y, Model S, Model X, and Cybertruck. Model Y is the Company's highest volume vehicle.\n\nIn fiscal year 2024, total automotive revenues were $77.1 billion, compared to $82.4 billion in fiscal year 2023, a decrease of approximately 6%. The decrease was primarily driven",
+      "section": "General",
+      "score": 0.2479354441165924,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0018",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "from results, performance, or achievements expressed or implied by the forward-looking statements.",
+      "section": "General",
+      "score": 0.21442654728889465,
+      "chunk_index": 18,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0017",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "from results, performance, or achievements expressed or implied by the forward-looking statements.",
+      "section": "General",
+      "score": 0.21442654728889465,
+      "chunk_index": 17,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0016",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "from results, performance, or achievements expressed or implied by the forward-looking statements.",
+      "section": "General",
+      "score": 0.21442654728889465,
+      "chunk_index": 16,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.0,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.537,
+    "overall_confidence": 0.378,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.28) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0007",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.2767,
+        "answer_overlap": 0.052,
+        "contributed": false
+      },
+      {
+        "chunk_id": "tesla_2024__0001",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.2479,
+        "answer_overlap": 0.058,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0018",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2144,
+        "answer_overlap": 0.154,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0017",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2144,
+        "answer_overlap": 0.154,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0016",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2144,
+        "answer_overlap": 0.154,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 2825.5,
+  "mode": "qa"
+}

@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided SEC filings, there are different gross margin percentages for different companies:\n\n**Microsoft Corp. (Fiscal 2024):** The gross margin percentage was **69.8%** [Source 1, Source 3]. Source 1 states \"Total gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%\" and Source 3 confirms \"Gross margin %: 69.8%\".\n\n**Apple Inc.:** The gross margin percentage was **46.2%** [Source 2], with gross margin of $180,683 million on total net sales of $391,035 million.\n\n**Tesla Inc. (Fiscal 2024):** The gross margin was **18.2%** [Source 4], which states \"Gross profit was $17.8 billion in fiscal 2024, representing a gross margin of 18.2%\". Additionally, Source 5 mentions that \"automotive gross margin excluding regulatory credits was approximately 14.6%\".\n\nEach company reports different gross margin percentages reflecting their different business models and cost structures.",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0009",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "w customer acquisition.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights\n\nTotal revenue for fiscal 2024 was $245.1 billion, compared to $211.9 billion in fiscal 2023, an increase of 16%. This growth was driven by strong performance in Intelligent Cloud and continued strength in Productivity and Business Processes.\n\nTotal gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%, compared to $146.1 billion or 68.9% in fiscal 2023. The improvement in gross margin was primarily driven by the higher mix of cloud services revenue and economies of",
+      "section": "General",
+      "score": 0.46831217408180237,
+      "chunk_index": 9,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0010",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s:\n  Products: $294,866\n  Services: $96,169\nTotal net sales: $391,035\n\nCost of sales:\n  Products: $198,144\n  Services: $25,200\nTotal cost of sales: $210,352\n\nGross margin: $180,683\nGross margin percentage: 46.2%\n\nOperating expenses:\n  Research and development: $31,370\n  Selling, general and administrative: $26,956\n\nOperating income: $123,216\nOther income/(expense), net: $269\n\nIncome before provision for income taxes: $123,485\nProvision for income taxes: $29,749\nNet income: $93,736\n\nEarnings per share:\n  Basic: $6.11\n  Diluted: $6.08\n\nITEM 1A. ADDITIONAL RISK FACTORS\n\nCybersecurity Risk: The Co",
+      "section": "General",
+      "score": 0.3859163224697113,
+      "chunk_index": 10,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0012",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "3.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED INCOME STATEMENTS\n(In millions, except per share amounts)\n\nRevenue:\n  Productivity and Business Processes: $77,451\n  Intelligent Cloud: $105,361\n  More Personal Computing: $62,265\nTotal revenue: $245,122\n\nCost of revenue: $74,149\nGross margin: $170,973\nGross margin %: 69.8%\n\nOperating expenses:\n  Research and development: $29,510\n  Sales and marketing: $24,456\n  General and administrative: $7,607\nTotal operating expenses: $61,573\n\nOperating income: $109,400\nOperating margin: 44.6%\n\nOther income, net: $3,269\nIncome before income taxes: $112,669\nPro",
+      "section": "General",
+      "score": 0.3565789759159088,
+      "chunk_index": 12,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0008",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ross profit was $17.8 billion in fiscal 2024, representing a gross margin of 18.2%, compared to a gross margin of 18.2% in fiscal 2023.\n\nTotal operating expenses were $11.6 billion in fiscal 2024, compared to $8.8 billion in fiscal 2023, primarily due to increased research and development expenses related to next-generation vehicle development and AI/robotics initiatives.\n\nNet income attributable to common stockholders was $7.1 billion in fiscal 2024, compared to $15.0 billion in fiscal 2023. The decrease in net income was primarily driven by lower automotive margins, higher operating expenses",
+      "section": "General",
+      "score": 0.2883790135383606,
+      "chunk_index": 8,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0005",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ductions, compressing automotive gross margins. In fiscal 2024, automotive gross margin excluding regulatory credits was approximately 14.6%.\n\nAutonomous Driving Risk: The Company's Full Self-Driving capabilities are subject to extensive regulatory scrutiny and have been involved in several investigations by the National Highway Traffic Safety Administration (NHTSA). Adverse regulatory decisions could require product recalls or curtail deployment.\n\nExecution Risk on New Products: The Company's growth depends substantially on successful development and production of next-generation vehicles, in",
+      "section": "General",
+      "score": 0.2843310236930847,
+      "chunk_index": 5,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.081,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.644,
+    "consistency_score": 0.866,
+    "overall_confidence": 0.38,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.47) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0009",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.4683,
+        "answer_overlap": 0.182,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0010",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3859,
+        "answer_overlap": 0.189,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0012",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3566,
+        "answer_overlap": 0.182,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0008",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.2884,
+        "answer_overlap": 0.237,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0005",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.2843,
+        "answer_overlap": 0.196,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 5216.2,
+  "mode": "qa"
+}

@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided SEC filings, Microsoft Corporation's main business segments are [Source 1]:\n\n1. **Productivity and Business Processes**\n2. **Intelligent Cloud** \n3. **More Personal Computing**\n\nFor the Productivity and Business Processes segment specifically, the filing provides additional detail [Source 2]: This segment includes Microsoft 365 (formerly Office 365), Exchange, SharePoint, Microsoft Teams, LinkedIn, and Dynamics 365. This segment had revenues of \"$77.5 billion in fiscal 2024, compared to $69.3 billion in fiscal 2023, an increase of 12%\" [Source 2].\n\nThe provided documents don't contain detailed descriptions of the Intelligent Cloud and More Personal Computing segments beyond their names being listed as Microsoft's three main business segments.",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0000",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "Microsoft Corporation 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nMicrosoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.\n\nMicrosoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerl",
+      "section": "General",
+      "score": 0.7926639318466187,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0001",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "rsonal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerly Office 365), Exchange, SharePoint, Microsoft Teams, LinkedIn, and Dynamics 365. Segment revenues were $77.5 billion in fiscal 2024, compared to $69.3 billion in fiscal 2023, an increase of 12%.\n\nMicrosoft 365 Commercial cloud revenue grew 15% year-over-year, driven by continued expansion into enterprise customers and the integration of Copilot AI capabilities. Microsoft Teams has over 320 million monthly active users. LinkedIn revenue grew 10% with continued strength in Talent Solutions and Ma",
+      "section": "General",
+      "score": 0.36583754420280457,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0014",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "e than any other cloud provider. Microsoft AI supercomputing infrastructure powers OpenAI training and inference at scale, as well as Microsoft's own Copilot services.\n\nCapital expenditures for fiscal 2024 were $55.7 billion, primarily for cloud and AI infrastructure including data center construction, servers, and networking equipment. The Company expects to continue significant capital investment to support AI and cloud growth.\n\nCOPILOT ECOSYSTEM\n\nMicrosoft 365 Copilot, launched broadly in November 2023, is available to enterprise customers at $30 per user per month. Early adoption has been",
+      "section": "General",
+      "score": 0.3492654263973236,
+      "chunk_index": 14,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0004",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "e Company's business and financial condition are sensitive to global and regional macroeconomic conditions, including inflation, interest rates, and consumer spending trends. Uncertain or weak economic conditions may harm the Company's business and results of operations.\n\nCompetition Risk: The markets for the Company's products and services are highly competitive, and the Company is subject to intense competition in all areas of its business. The Company faces competition from vertically integrated competitors that may have better access to key components, lower cost structures, or alternative",
+      "section": "General",
+      "score": 0.27209949493408203,
+      "chunk_index": 4,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0007",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "es for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of approximately 2%. This growth was primarily driven by strong performance in our Services segment.\n\nTotal operating expenses for fiscal 2024 were $53.9 billion, compared to $54.8 billion in fiscal 2023.\n\nNet income for fiscal 2024 was $93.7 billion, compared to $97.0 billion in fiscal 2023. Diluted earnings per share were $6.08, compared to $6.13 in fiscal 2023.\n\nGross margin for fiscal 2024 was $180.7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margi",
+      "section": "General",
+      "score": 0.1969124674797058,
+      "chunk_index": 7,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.136,
+    "coverage_score": 0.2,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.411,
+    "overall_confidence": 0.44,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.79) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0000",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.7927,
+        "answer_overlap": 0.326,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0001",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3658,
+        "answer_overlap": 0.465,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0014",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3493,
+        "answer_overlap": 0.089,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0004",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2721,
+        "answer_overlap": 0.022,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0007",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.1969,
+        "answer_overlap": 0.143,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 4551.3,
+  "mode": "qa"
+}

@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided Apple Inc. 10-K Annual Report for Fiscal Year 2024, the top risk factors mentioned are:\n\n1. **Macroeconomic Risks**: [Source 2] states \"The Company's business and financial condition are sensitive to global and regional macroeconomic conditions.\"\n\n2. **Cybersecurity Risk**: [Source 3] indicates \"The Company's products, services, and business operations are subject to cybersecurity threats including malware, ransomware, and sophisticated state-sponsored attacks that could disrupt operations or expose sensitive customer data.\"\n\n3. **Geopolitical Risk**: [Source 3] notes \"The Company's operations in China are subject to significant political, regulatory, and economic risks. China represents approximately 17% of net sales. Restrictions on trade, travel bans, or regulatory actions by Chinese authorities could materially impact\" the company.\n\nThese are the specific risk factors explicitly identified in Apple's fiscal 2024 10-K filing within the provided context. The documents indicate there are additional risk factors in the \"ITEM 1A. RISK FACTORS\" section, but the complete list is not fully detailed in the provided excerpts.",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.5243608951568604,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0003",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud services, digital content, payment, and licensing. Services net sales were $96.2 billion in fiscal 2024, compared to $85.2 billion in fiscal 2023 \u2014 a growth of approximately 13%.\n\nITEM 1A. RISK FACTORS\n\nThe following discussion of risk factors contains forward-looking statements. These risk factors may be important to understanding any statement in this Form 10-K or elsewhere.\n\nMacroeconomic Risks: The Company's business and financial condition are sensitive to global and regional macroeconomic cond",
+      "section": "General",
+      "score": 0.5191164612770081,
+      "chunk_index": 3,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0011",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "share:\n  Basic: $6.11\n  Diluted: $6.08\n\nITEM 1A. ADDITIONAL RISK FACTORS\n\nCybersecurity Risk: The Company's products, services, and business operations are subject to cybersecurity threats including malware, ransomware, and sophisticated state-sponsored attacks that could disrupt operations or expose sensitive customer data.\n\nGeopolitical Risk: The Company's operations in China are subject to significant political, regulatory, and economic risks. China represents approximately 17% of net sales. Restrictions on trade, travel bans, or regulatory actions by Chinese authorities could materially im",
+      "section": "General",
+      "score": 0.4296298027038574,
+      "chunk_index": 11,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0005",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "ame Pass has approximately 34 million subscribers.\n\nSearch and news advertising revenues grew 12%, driven by AI-enhanced Bing and Edge market share gains following the integration of Copilot search capabilities.\n\nITEM 1A. RISK FACTORS\n\nAI and Competitive Risk: The Company has made substantial investments in artificial intelligence, including its partnership with OpenAI and integration of Copilot features across products. There is no assurance these investments will generate expected returns. Competitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Fa",
+      "section": "General",
+      "score": 0.3675963282585144,
+      "chunk_index": 5,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.310520738363266,
+      "chunk_index": 1,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.186,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.743,
+    "consistency_score": 0.49,
+    "overall_confidence": 0.389,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.52) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5244,
+        "answer_overlap": 0.192,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0003",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5191,
+        "answer_overlap": 0.286,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0011",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4296,
+        "answer_overlap": 0.688,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0005",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3676,
+        "answer_overlap": 0.141,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3105,
+        "answer_overlap": 0.131,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 4482.4,
+  "mode": "qa"
+}

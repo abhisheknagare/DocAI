@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided SEC filing information, I can describe Apple's main business activities but the documents don't contain detailed information about specific business segments.\n\nAccording to Apple Inc.'s 10-K Annual Report for Fiscal Year 2024, Apple's main business involves designing, manufacturing, and marketing smartphones, personal computers, tablets, wearables, and accessories, along with selling related services [Source 1].\n\nThe company's key products include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications [Source 3].\n\nFrom a revenue perspective, iPhone appears to be the dominant component of Apple's business. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales [Source 3]. This suggests that the iPhone business represents Apple's largest revenue segment.\n\nThe documents also mention that Apple has a Services segment, which showed strong performance and was a primary driver of the company's overall revenue growth in fiscal 2024 [Source 5].\n\nHowever, the provided documents don't contain a complete breakdown of Apple's formal business segment structure or detailed descriptions of each segment's specific activities and performance metrics.",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.68474280834198,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0000",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "Microsoft Corporation 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nMicrosoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.\n\nMicrosoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerl",
+      "section": "General",
+      "score": 0.38106000423431396,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.3643645644187927,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0004",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "e Company's business and financial condition are sensitive to global and regional macroeconomic conditions, including inflation, interest rates, and consumer spending trends. Uncertain or weak economic conditions may harm the Company's business and results of operations.\n\nCompetition Risk: The markets for the Company's products and services are highly competitive, and the Company is subject to intense competition in all areas of its business. The Company faces competition from vertically integrated competitors that may have better access to key components, lower cost structures, or alternative",
+      "section": "General",
+      "score": 0.3394898474216461,
+      "chunk_index": 4,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0007",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "es for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of approximately 2%. This growth was primarily driven by strong performance in our Services segment.\n\nTotal operating expenses for fiscal 2024 were $53.9 billion, compared to $54.8 billion in fiscal 2023.\n\nNet income for fiscal 2024 was $93.7 billion, compared to $97.0 billion in fiscal 2023. Diluted earnings per share were $6.08, compared to $6.13 in fiscal 2023.\n\nGross margin for fiscal 2024 was $180.7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margi",
+      "section": "General",
+      "score": 0.2839123606681824,
+      "chunk_index": 7,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.158,
+    "coverage_score": 0.2,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.564,
+    "overall_confidence": 0.47,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.68) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.6847,
+        "answer_overlap": 0.292,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0000",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3811,
+        "answer_overlap": 0.192,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3644,
+        "answer_overlap": 0.378,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0004",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3395,
+        "answer_overlap": 0.094,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0007",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.2839,
+        "answer_overlap": 0.183,
+        "contributed": true
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 6111.2,
+  "mode": "qa"
+}

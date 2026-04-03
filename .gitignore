@@ -1,9 +1,7 @@
-data/raw/
-data/index/
-data/cache/
-data/monitoring/
 __pycache__/
 *.pyc
 .env
-*.pkl
-*.index
+*.faiss
+.DS_Store
+venv/
+*.egg-info/

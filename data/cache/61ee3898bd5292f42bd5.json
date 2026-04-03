@@ -1,0 +1,133 @@
+{
+  "metrics": {
+    "company": "Microsoft Corp.",
+    "fiscal_year": "2024",
+    "revenue": {
+      "value": 245.122,
+      "unit": "billion USD",
+      "growth_pct": 16
+    },
+    "net_income": {
+      "value": 88.136,
+      "unit": "billion USD",
+      "growth_pct": 22
+    },
+    "gross_margin": {
+      "value": 69.8,
+      "unit": "percent"
+    },
+    "ebitda": null,
+    "operating_income": {
+      "value": 109.4,
+      "unit": "billion USD"
+    },
+    "cash_and_equivalents": {
+      "value": 75.5,
+      "unit": "billion USD"
+    },
+    "total_debt": {
+      "value": 79.6,
+      "unit": "billion USD"
+    },
+    "eps_diluted": {
+      "value": 11.8,
+      "unit": "USD"
+    },
+    "capex": null,
+    "r_and_d": {
+      "value": 29.5,
+      "unit": "billion USD"
+    },
+    "key_risks": [
+      "AI and Competitive Risk",
+      "Cybersecurity Risk",
+      "Regulatory Risk",
+      "OpenAI Partnership Risk"
+    ],
+    "key_segments": [
+      "Productivity and Business Processes",
+      "Intelligent Cloud",
+      "More Personal Computing"
+    ],
+    "mentioned_competitors": [
+      "Google",
+      "Amazon",
+      "Meta",
+      "Apple"
+    ],
+    "data_confidence": "high"
+  },
+  "doc_id": "microsoft_2024",
+  "raw_response": "```json\n{\n  \"company\": \"Microsoft Corp.\",\n  \"fiscal_year\": \"2024\",\n  \"revenue\": {\"value\": 245.122, \"unit\": \"billion USD\", \"growth_pct\": 16},\n  \"net_income\": {\"value\": 88.136, \"unit\": \"billion USD\", \"growth_pct\": 22},\n  \"gross_margin\": {\"value\": 69.8, \"unit\": \"percent\"},\n  \"ebitda\": null,\n  \"operating_income\": {\"value\": 109.4, \"unit\": \"billion USD\"},\n  \"cash_and_equivalents\": {\"value\": 75.5, \"unit\": \"billion USD\"},\n  \"total_debt\": {\"value\": 79.6, \"unit\": \"billion USD\"},\n  \"eps_diluted\": {\"value\": 11.80, \"unit\": \"USD\"},\n  \"capex\": null,\n  \"r_and_d\": {\"value\": 29.5, \"unit\": \"billion USD\"},\n  \"key_risks\": [\"AI and Competitive Risk\", \"Cybersecurity Risk\", \"Regulatory Risk\", \"OpenAI Partnership Risk\"],\n  \"key_segments\": [\"Productivity and Business Processes\", \"Intelligent Cloud\", \"More Personal Computing\"],\n  \"mentioned_competitors\": [\"Google\", \"Amazon\", \"Meta\", \"Apple\"],\n  \"data_confidence\": \"high\"\n}\n```",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0012",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "3.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED INCOME STATEMENTS\n(In millions, except per share amounts)\n\nRevenue:\n  Productivity and Business Processes: $77,451\n  Intelligent Cloud: $105,361\n  More Personal Computing: $62,265\nTotal revenue: $245,122\n\nCost of revenue: $74,149\nGross margin: $170,973\nGross margin %: 69.8%\n\nOperating expenses:\n  Research and development: $29,510\n  Sales and marketing: $24,456\n  General and administrative: $7,607\nTotal operating expenses: $61,573\n\nOperating income: $109,400\nOperating margin: 44.6%\n\nOther income, net: $3,269\nIncome before income taxes: $112,669\nPro",
+      "section": "General",
+      "score": 0.6257994174957275,
+      "chunk_index": 12,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0013",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "$109,400\nOperating margin: 44.6%\n\nOther income, net: $3,269\nIncome before income taxes: $112,669\nProvision for income taxes: $24,564\nNet income: $88,136\n\nDiluted earnings per share: $11.80\n\nBalance sheet highlights:\n  Cash and short-term investments: $75.5 billion\n  Total assets: $512.2 billion\n  Total debt: $79.6 billion\n  Stockholders' equity: $268.5 billion\n\nAZURE AND CLOUD SERVICES\n\nAzure infrastructure includes more than 60 announced regions globally, with 33 announced to come, which is more than any other cloud provider. Microsoft AI supercomputing infrastructure powers OpenAI training a",
+      "section": "General",
+      "score": 0.3977808952331543,
+      "chunk_index": 13,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0010",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "nt in gross margin was primarily driven by the higher mix of cloud services revenue and economies of scale in cloud infrastructure.\n\nOperating income was $109.4 billion in fiscal 2024, compared to $88.5 billion in fiscal 2023, an increase of 24%. Operating margin expanded to 44.6% from 41.8% in fiscal 2023.\n\nNet income for fiscal 2024 was $88.1 billion, compared to $72.4 billion in fiscal 2023, an increase of 22%. Diluted earnings per share were $11.80, compared to $9.65 in fiscal 2023.\n\nResearch and development expenses were $29.5 billion in fiscal 2024, compared to $27.2 billion in fiscal 20",
+      "section": "General",
+      "score": 0.2149401605129242,
+      "chunk_index": 10,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0009",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "w customer acquisition.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights\n\nTotal revenue for fiscal 2024 was $245.1 billion, compared to $211.9 billion in fiscal 2023, an increase of 16%. This growth was driven by strong performance in Intelligent Cloud and continued strength in Productivity and Business Processes.\n\nTotal gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%, compared to $146.1 billion or 68.9% in fiscal 2023. The improvement in gross margin was primarily driven by the higher mix of cloud services revenue and economies of",
+      "section": "General",
+      "score": 0.5729468464851379,
+      "chunk_index": 9,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0005",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "ame Pass has approximately 34 million subscribers.\n\nSearch and news advertising revenues grew 12%, driven by AI-enhanced Bing and Edge market share gains following the integration of Copilot search capabilities.\n\nITEM 1A. RISK FACTORS\n\nAI and Competitive Risk: The Company has made substantial investments in artificial intelligence, including its partnership with OpenAI and integration of Copilot features across products. There is no assurance these investments will generate expected returns. Competitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Fa",
+      "section": "General",
+      "score": 0.22940152883529663,
+      "chunk_index": 5,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0007",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "dents could damage the Company's reputation and result in significant financial loss.\n\nRegulatory Risk: The Company is subject to increasing regulatory scrutiny globally, including competition law investigations in Europe and the United States related to its cloud computing and AI practices. The Digital Markets Act in the European Union imposes obligations on designated gatekeepers. The Company's Activision Blizzard acquisition faced significant regulatory review.\n\nOpenAI Partnership Risk: The Company has invested approximately $13 billion in OpenAI and has an exclusive cloud partnership. Chan",
+      "section": "General",
+      "score": 0.13452120125293732,
+      "chunk_index": 7,
+      "total_chunks": 50
+    }
+  ],
+  "confidence_score": 0.019,
+  "cached": false,
+  "latency_ms": 4079.5
+}

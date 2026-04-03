@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided SEC filing documents, here is a summary of Apple Inc. for fiscal year 2024:\n\n**Company Overview:**\nApple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories, and also sells a variety of related services [Source 1]. The company is committed to bringing the best user experience to customers through innovative hardware, software, and services [Source 2].\n\n**Product Portfolio:**\nApple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications [Source 2].\n\n**Fiscal 2024 Financial Performance by Product Category:**\n\n- **iPhone**: Net sales were \"$201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023\" [Source 2]\n\n- **Mac**: \"Net sales were $29.8 billion in fiscal 2024, compared to $29.4 billion in fiscal 2023\" [Source 3]\n\n- **iPad**: \"Net sales were $26.7 billion in fiscal 2024, compared to $28.3 billion in fiscal 2023\" [Source 3]\n\n- **Wearables, Home and Accessories**: \"Net sales were $37.0 billion in fiscal 2024, compared to $39.8 billion in fiscal 2023\" [Source 3]\n\n**Fiscal Year:**\nApple's fiscal year is \"the 52 or 53-week period that ends on the last Saturday of September\" [Source 1].\n\nThe documents show that while iPhone remains Apple's dominant revenue source, most product categories experienced year-over-year declines in fiscal 2024, with only Mac showing growth.",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.8415573835372925,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.5398241281509399,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0002",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on Apple silicon. Mac net sales were $29.8 billion in fiscal 2024, compared to $29.4 billion in fiscal 2023.\n\niPad includes iPad Pro, iPad Air, iPad, and iPad mini. iPad net sales were $26.7 billion in fiscal 2024, compared to $28.3 billion in fiscal 2023.\n\nWearables, Home and Accessories includes Apple Watch, AirPods, Beats products, Apple TV, and accessories. Net sales were $37.0 billion in fiscal 2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud serv",
+      "section": "General",
+      "score": 0.3202250599861145,
+      "chunk_index": 2,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0006",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "petitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Failure to execute on AI strategy could result in market share loss and revenue underperformance.\n\nCybersecurity Risk: In January 2024, the Company disclosed that a Russian state-sponsored threat actor known as Midnight Blizzard gained unauthorized access to a small percentage of Microsoft corporate email accounts. The Company has undertaken significant remediation efforts. Future cybersecurity incidents could damage the Company's reputation and result in significant financial loss.\n\nRegulatory Ri",
+      "section": "General",
+      "score": 0.1563960313796997,
+      "chunk_index": 6,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0005",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "ame Pass has approximately 34 million subscribers.\n\nSearch and news advertising revenues grew 12%, driven by AI-enhanced Bing and Edge market share gains following the integration of Copilot search capabilities.\n\nITEM 1A. RISK FACTORS\n\nAI and Competitive Risk: The Company has made substantial investments in artificial intelligence, including its partnership with OpenAI and integration of Copilot features across products. There is no assurance these investments will generate expected returns. Competitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Fa",
+      "section": "General",
+      "score": 0.1531752496957779,
+      "chunk_index": 5,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.146,
+    "coverage_score": 0.2,
+    "groundedness_score": 0.807,
+    "consistency_score": 0.605,
+    "overall_confidence": 0.457,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.84) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.8416,
+        "answer_overlap": 0.569,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5398,
+        "answer_overlap": 0.467,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0002",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.3202,
+        "answer_overlap": 0.321,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0006",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.1564,
+        "answer_overlap": 0.063,
+        "contributed": false
+      },
+      {
+        "chunk_id": "microsoft_2024__0005",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.1532,
+        "answer_overlap": 0.063,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 6746.4,
+  "mode": "qa"
+}

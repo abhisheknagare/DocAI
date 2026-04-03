@@ -1,0 +1,120 @@
+{
+  "answer": "Based on the provided documents, I can see information about Apple Inc. from fiscal year 2024, but the documents don't contain Apple's complete total revenue figure or year-over-year growth calculation.\n\nFrom [Source 3], I can see that \"iPhone net sales were $201.0 billion, representing approximately 52% of total net sales\" in fiscal 2024, compared to $205.5 billion in fiscal 2023. This indicates iPhone sales decreased year-over-year, but this is only one product segment.\n\nThe provided documents don't contain Apple's total revenue for fiscal 2024 or the complete year-over-year growth percentage for total revenue.",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0009",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "w customer acquisition.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal Year 2024 Highlights\n\nTotal revenue for fiscal 2024 was $245.1 billion, compared to $211.9 billion in fiscal 2023, an increase of 16%. This growth was driven by strong performance in Intelligent Cloud and continued strength in Productivity and Business Processes.\n\nTotal gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%, compared to $146.1 billion or 68.9% in fiscal 2023. The improvement in gross margin was primarily driven by the higher mix of cloud services revenue and economies of",
+      "section": "General",
+      "score": 0.5889195799827576,
+      "chunk_index": 9,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0000",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "Apple Inc. 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nApple Inc. (the \"Company,\" \"Apple\") designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. Apple also sells a variety of related services. The Company's fiscal year is the 52 or 53-week period that ends on the last Saturday of September.\n\nApple is committed to bringing the best user experience to its customers through its innovative hardware, software, and services. Apple's products and services include iPh",
+      "section": "General",
+      "score": 0.5613682270050049,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0001",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s through its innovative hardware, software, and services. Apple's products and services include iPhone, Mac, iPad, Apple Watch, AirPods, Apple TV, HomePod, and a portfolio of consumer and professional software applications.\n\nPRODUCTS\n\niPhone is Apple's line of smartphones based on its iOS operating system. iPhone designs incorporate motion sensors, cameras, displays, and cellular network capabilities. In fiscal 2024, iPhone net sales were $201.0 billion, representing approximately 52% of total net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on",
+      "section": "General",
+      "score": 0.43714845180511475,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0012",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "3.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED INCOME STATEMENTS\n(In millions, except per share amounts)\n\nRevenue:\n  Productivity and Business Processes: $77,451\n  Intelligent Cloud: $105,361\n  More Personal Computing: $62,265\nTotal revenue: $245,122\n\nCost of revenue: $74,149\nGross margin: $170,973\nGross margin %: 69.8%\n\nOperating expenses:\n  Research and development: $29,510\n  Sales and marketing: $24,456\n  General and administrative: $7,607\nTotal operating expenses: $61,573\n\nOperating income: $109,400\nOperating margin: 44.6%\n\nOther income, net: $3,269\nIncome before income taxes: $112,669\nPro",
+      "section": "General",
+      "score": 0.35609591007232666,
+      "chunk_index": 12,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0010",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "Dojo supercomputer.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED STATEMENTS OF OPERATIONS\n(In millions)\n\nAutomotive revenues: $77,119\nEnergy generation and storage revenues: $10,077  \nServices and other revenues: $10,121\nTotal revenues: $97,317\n\nCost of revenues:\n  Automotive: $63,880\n  Energy generation and storage: $7,277\n  Services and other: $8,374\nTotal cost of revenues: $79,531\n\nTotal gross profit: $17,786\nGross margin: 18.3%\n\nOperating expenses:\n  Research and development: $4,543\n  Selling, general and administrative: $5,023\n  Restructuring and other: $510\nTotal operating expenses: $10,0",
+      "section": "General",
+      "score": 0.27035221457481384,
+      "chunk_index": 10,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.204,
+    "coverage_score": 0.4,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.601,
+    "overall_confidence": 0.529,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.59) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0009",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.5889,
+        "answer_overlap": 0.239,
+        "contributed": true
+      },
+      {
+        "chunk_id": "apple_2024__0000",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.5614,
+        "answer_overlap": 0.101,
+        "contributed": false
+      },
+      {
+        "chunk_id": "apple_2024__0001",
+        "company": "Apple Inc.",
+        "section": "General",
+        "retrieval_score": 0.4371,
+        "answer_overlap": 0.289,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0012",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.3561,
+        "answer_overlap": 0.119,
+        "contributed": false
+      },
+      {
+        "chunk_id": "tesla_2024__0010",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.2704,
+        "answer_overlap": 0.033,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 4616.2,
+  "mode": "qa"
+}

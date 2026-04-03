@@ -1,0 +1,135 @@
+{
+  "metrics": {
+    "company": "Apple Inc.",
+    "fiscal_year": "2024",
+    "revenue": {
+      "value": 391.035,
+      "unit": "billion USD",
+      "growth_pct": 2
+    },
+    "net_income": {
+      "value": 93.736,
+      "unit": "billion USD",
+      "growth_pct": null
+    },
+    "gross_margin": {
+      "value": 46.2,
+      "unit": "percent"
+    },
+    "ebitda": {
+      "value": null,
+      "unit": "billion USD"
+    },
+    "operating_income": {
+      "value": 123.216,
+      "unit": "billion USD"
+    },
+    "cash_and_equivalents": {
+      "value": 153.2,
+      "unit": "billion USD"
+    },
+    "total_debt": {
+      "value": null,
+      "unit": "billion USD"
+    },
+    "eps_diluted": {
+      "value": 6.08,
+      "unit": "USD"
+    },
+    "capex": {
+      "value": null,
+      "unit": "billion USD"
+    },
+    "r_and_d": {
+      "value": 31.37,
+      "unit": "billion USD"
+    },
+    "key_risks": [
+      "Cybersecurity Risk",
+      "Geopolitical Risk",
+      "Macroeconomic Risks"
+    ],
+    "key_segments": [
+      "Products",
+      "Services",
+      "Mac",
+      "iPad",
+      "Wearables, Home and Accessories"
+    ],
+    "mentioned_competitors": [],
+    "data_confidence": "high"
+  },
+  "doc_id": "apple_2024",
+  "raw_response": "```json\n{\n  \"company\": \"Apple Inc.\",\n  \"fiscal_year\": \"2024\",\n  \"revenue\": {\"value\": 391.035, \"unit\": \"billion USD\", \"growth_pct\": 2},\n  \"net_income\": {\"value\": 93.736, \"unit\": \"billion USD\", \"growth_pct\": null},\n  \"gross_margin\": {\"value\": 46.2, \"unit\": \"percent\"},\n  \"ebitda\": {\"value\": null, \"unit\": \"billion USD\"},\n  \"operating_income\": {\"value\": 123.216, \"unit\": \"billion USD\"},\n  \"cash_and_equivalents\": {\"value\": 153.2, \"unit\": \"billion USD\"},\n  \"total_debt\": {\"value\": null, \"unit\": \"billion USD\"},\n  \"eps_diluted\": {\"value\": 6.08, \"unit\": \"USD\"},\n  \"capex\": {\"value\": null, \"unit\": \"billion USD\"},\n  \"r_and_d\": {\"value\": 31.37, \"unit\": \"billion USD\"},\n  \"key_risks\": [\"Cybersecurity Risk\", \"Geopolitical Risk\", \"Macroeconomic Risks\"],\n  \"key_segments\": [\"Products\", \"Services\", \"Mac\", \"iPad\", \"Wearables, Home and Accessories\"],\n  \"mentioned_competitors\": [],\n  \"data_confidence\": \"high\"\n}\n```",
+  "sources": [
+    {
+      "chunk_id": "apple_2024__0010",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "s:\n  Products: $294,866\n  Services: $96,169\nTotal net sales: $391,035\n\nCost of sales:\n  Products: $198,144\n  Services: $25,200\nTotal cost of sales: $210,352\n\nGross margin: $180,683\nGross margin percentage: 46.2%\n\nOperating expenses:\n  Research and development: $31,370\n  Selling, general and administrative: $26,956\n\nOperating income: $123,216\nOther income/(expense), net: $269\n\nIncome before provision for income taxes: $123,485\nProvision for income taxes: $29,749\nNet income: $93,736\n\nEarnings per share:\n  Basic: $6.11\n  Diluted: $6.08\n\nITEM 1A. ADDITIONAL RISK FACTORS\n\nCybersecurity Risk: The Co",
+      "section": "General",
+      "score": 0.6519657373428345,
+      "chunk_index": 10,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0002",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "net sales, compared to $205.5 billion in fiscal 2023.\n\nMac includes desktops and notebooks based on Apple silicon. Mac net sales were $29.8 billion in fiscal 2024, compared to $29.4 billion in fiscal 2023.\n\niPad includes iPad Pro, iPad Air, iPad, and iPad mini. iPad net sales were $26.7 billion in fiscal 2024, compared to $28.3 billion in fiscal 2023.\n\nWearables, Home and Accessories includes Apple Watch, AirPods, Beats products, Apple TV, and accessories. Net sales were $37.0 billion in fiscal 2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud serv",
+      "section": "General",
+      "score": 0.33511531352996826,
+      "chunk_index": 2,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0009",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "xt twelve months.\n\nCash and cash equivalents and current and non-current marketable securities totaled $153.2 billion as of September 28, 2024, compared to $162.1 billion as of September 30, 2023.\n\nDuring fiscal 2024, the Company returned $110.0 billion to shareholders through dividends and share repurchases. The Company also paid dividends of $0.96 per share during fiscal 2024.\n\nITEM 8. FINANCIAL STATEMENTS\n\nCONSOLIDATED STATEMENTS OF OPERATIONS\n(In millions, except per share amounts)\n\nNet sales:\n  Products: $294,866\n  Services: $96,169\nTotal net sales: $391,035\n\nCost of sales:\n  Products: $1",
+      "section": "General",
+      "score": 0.2901705503463745,
+      "chunk_index": 9,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0007",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "es for fiscal 2024 were $391.0 billion, compared to $383.3 billion in fiscal 2023, an increase of approximately 2%. This growth was primarily driven by strong performance in our Services segment.\n\nTotal operating expenses for fiscal 2024 were $53.9 billion, compared to $54.8 billion in fiscal 2023.\n\nNet income for fiscal 2024 was $93.7 billion, compared to $97.0 billion in fiscal 2023. Diluted earnings per share were $6.08, compared to $6.13 in fiscal 2023.\n\nGross margin for fiscal 2024 was $180.7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margi",
+      "section": "General",
+      "score": 0.23447857797145844,
+      "chunk_index": 7,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0008",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": ".7 billion or 46.2%, compared to $169.1 billion or 44.1% in fiscal 2023. The increase in gross margin percentage was primarily due to an improved mix driven by Services growth and favorable product mix.\n\nLIQUIDITY AND CAPITAL RESOURCES\n\nThe Company believes its existing balances of cash and cash equivalents and short-term investments, together with cash generated by operations and access to credit markets, will be sufficient to satisfy its cash requirements and capital return program over the next twelve months.\n\nCash and cash equivalents and current and non-current marketable securities total",
+      "section": "General",
+      "score": 0.17215444147586823,
+      "chunk_index": 8,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "apple_2024__0003",
+      "doc_id": "apple_2024",
+      "filename": "apple_2024.txt",
+      "company": "Apple Inc.",
+      "text": "2024, compared to $39.8 billion in fiscal 2023.\n\nServices include advertising, AppleCare, cloud services, digital content, payment, and licensing. Services net sales were $96.2 billion in fiscal 2024, compared to $85.2 billion in fiscal 2023 \u2014 a growth of approximately 13%.\n\nITEM 1A. RISK FACTORS\n\nThe following discussion of risk factors contains forward-looking statements. These risk factors may be important to understanding any statement in this Form 10-K or elsewhere.\n\nMacroeconomic Risks: The Company's business and financial condition are sensitive to global and regional macroeconomic cond",
+      "section": "General",
+      "score": 0.6350772976875305,
+      "chunk_index": 3,
+      "total_chunks": 50
+    }
+  ],
+  "confidence_score": 0.128,
+  "cached": false,
+  "latency_ms": 4328.6
+}

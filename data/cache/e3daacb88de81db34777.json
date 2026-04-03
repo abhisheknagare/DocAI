@@ -1,0 +1,120 @@
+{
+  "answer": "The provided documents don't contain specific information about Microsoft's cloud segment growth year over year. \n\nWhile the documents mention that Microsoft's \"Productivity and Business Processes\" segment revenues were $77.5 billion in fiscal 2024, compared to $69.3 billion in fiscal 2023, an increase of 12% [Source 1], and that \"Microsoft 365 Commercial cloud revenue grew 15% year-over-year\" [Source 1], these refer to specific products within segments rather than the overall cloud segment performance.\n\nThe documents reference Microsoft's \"Intelligent Cloud\" as one of their three segments [Source 2], but don't provide the specific year-over-year growth figures for that segment.",
+  "sources": [
+    {
+      "chunk_id": "microsoft_2024__0001",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "rsonal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerly Office 365), Exchange, SharePoint, Microsoft Teams, LinkedIn, and Dynamics 365. Segment revenues were $77.5 billion in fiscal 2024, compared to $69.3 billion in fiscal 2023, an increase of 12%.\n\nMicrosoft 365 Commercial cloud revenue grew 15% year-over-year, driven by continued expansion into enterprise customers and the integration of Copilot AI capabilities. Microsoft Teams has over 320 million monthly active users. LinkedIn revenue grew 10% with continued strength in Talent Solutions and Ma",
+      "section": "General",
+      "score": 0.5062866806983948,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0000",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "Microsoft Corporation 10-K Annual Report \u2014 Fiscal Year 2024\nUnited States Securities and Exchange Commission\nWashington, D.C. 20549\n\nITEM 1. BUSINESS\n\nMicrosoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.\n\nMicrosoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nPRODUCTIVITY AND BUSINESS PROCESSES\n\nThis segment includes Microsoft 365 (formerl",
+      "section": "General",
+      "score": 0.4535207748413086,
+      "chunk_index": 0,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0002",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "82.4 billion in fiscal year 2023, a decrease of approximately 6%. The decrease was primarily driven by average selling price reductions as the Company prioritized volume and expanded into new markets.\n\nThe Company delivered approximately 1,789,226 vehicles in fiscal year 2024, compared to 1,808,581 deliveries in fiscal year 2023.\n\nENERGY GENERATION AND STORAGE SEGMENT\n\nThe Energy Generation and Storage segment includes the design, manufacture, installation, sale, and leasing of solar energy systems, Powerwall, Megapack, and related products. Energy revenues were $10.1 billion in fiscal 2024, c",
+      "section": "General",
+      "score": 0.30860036611557007,
+      "chunk_index": 2,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "tesla_2024__0001",
+      "doc_id": "tesla_2024",
+      "filename": "tesla_2024.txt",
+      "company": "Tesla Inc.",
+      "text": "ble energy. To achieve this mission, the Company has designed and deployed a vertically integrated energy and transportation ecosystem.\n\nAUTOMOTIVE SEGMENT\n\nThe Company's automotive segment includes the design, development, manufacturing, leasing, and sale of electric vehicles. The Company currently manufactures the Model 3, Model Y, Model S, Model X, and Cybertruck. Model Y is the Company's highest volume vehicle.\n\nIn fiscal year 2024, total automotive revenues were $77.1 billion, compared to $82.4 billion in fiscal year 2023, a decrease of approximately 6%. The decrease was primarily driven",
+      "section": "General",
+      "score": 0.22081810235977173,
+      "chunk_index": 1,
+      "total_chunks": 50
+    },
+    {
+      "chunk_id": "microsoft_2024__0014",
+      "doc_id": "microsoft_2024",
+      "filename": "microsoft_2024.txt",
+      "company": "Microsoft Corp.",
+      "text": "e than any other cloud provider. Microsoft AI supercomputing infrastructure powers OpenAI training and inference at scale, as well as Microsoft's own Copilot services.\n\nCapital expenditures for fiscal 2024 were $55.7 billion, primarily for cloud and AI infrastructure including data center construction, servers, and networking equipment. The Company expects to continue significant capital investment to support AI and cloud growth.\n\nCOPILOT ECOSYSTEM\n\nMicrosoft 365 Copilot, launched broadly in November 2023, is available to enterprise customers at $30 per user per month. Early adoption has been",
+      "section": "General",
+      "score": 0.21594735980033875,
+      "chunk_index": 14,
+      "total_chunks": 50
+    }
+  ],
+  "confidence": {
+    "retrieval_confidence": 0.059,
+    "coverage_score": 0.0,
+    "groundedness_score": 0.85,
+    "consistency_score": 0.697,
+    "overall_confidence": 0.42,
+    "verdict": "\ud83d\udd36 Low Confidence",
+    "explanation": "Weak retrieval match (top: 0.51) or low answer-context overlap. The answer may include hallucinations. Recommend verifying against source documents.",
+    "chunk_scores": [
+      {
+        "chunk_id": "microsoft_2024__0001",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.5063,
+        "answer_overlap": 0.39,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0000",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.4535,
+        "answer_overlap": 0.268,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0002",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.3086,
+        "answer_overlap": 0.177,
+        "contributed": true
+      },
+      {
+        "chunk_id": "tesla_2024__0001",
+        "company": "Tesla Inc.",
+        "section": "General",
+        "retrieval_score": 0.2208,
+        "answer_overlap": 0.152,
+        "contributed": true
+      },
+      {
+        "chunk_id": "microsoft_2024__0014",
+        "company": "Microsoft Corp.",
+        "section": "General",
+        "retrieval_score": 0.2159,
+        "answer_overlap": 0.116,
+        "contributed": false
+      }
+    ]
+  },
+  "guardrail": {
+    "triggered": false,
+    "type": null,
+    "severity": "pass",
+    "message": ""
+  },
+  "cached": false,
+  "latency_ms": 4573.8,
+  "mode": "qa"
+}
