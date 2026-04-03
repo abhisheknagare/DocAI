@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 Ingestion Pipeline
 Runs the full ingestion: Download → Extract → Chunk → Embed → Index
@@ -18,7 +17,6 @@ import numpy as np
 from pathlib import Path
 from tqdm import tqdm
 
-# Add project root to path
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 
@@ -53,7 +51,7 @@ def main():
     print("  Financial RAG Ingestion Pipeline")
     print("="*60)
 
-    # ── Step 1: Download ──────────────────────────────────────────────────────
+    #Step 1: Download
     if not args.skip_download:
         print("\n[1/4] DOWNLOADING SEC EDGAR FILINGS")
         from src.ingestion.downloader import download_company_filings
@@ -70,7 +68,7 @@ def main():
     else:
         print("\n[1/4] SKIPPING DOWNLOAD (--skip-download)")
 
-    # ── Step 2: Extract text ─────────────────────────────────────────────────
+    #Step 2: Extract text 
     if not args.skip_extract:
         print("\n[2/4] EXTRACTING TEXT FROM PDFs")
         from src.ingestion.extractor import extract_directory
@@ -82,7 +80,7 @@ def main():
     else:
         print("\n[2/4] SKIPPING EXTRACTION (--skip-extract)")
 
-    # ── Step 3: Chunk ────────────────────────────────────────────────────────
+    #Step 3: Chunk 
     if not args.skip_chunk:
         print("\n[3/4] CHUNKING DOCUMENTS")
         from src.ingestion.chunker import chunk_directory
@@ -102,14 +100,14 @@ def main():
         chunks = load_chunks(args.chunk_dir)
         print(f"  Loaded {len(chunks)} chunks from {args.chunk_dir}")
 
-    # ── Step 4: Embed + Index ─────────────────────────────────────────────────
+    #Step 4: Embed + Index 
     print("\n[4/4] EMBEDDING + INDEXING")
     from src.embeddings.embedder import get_embedder
     from src.vectorstore.faiss_store import FAISSVectorStore
 
     embedder = get_embedder(args.embedding_model)
 
-    # Fit TF-IDF fallback if needed
+    #Fit TF-IDF fallback if needed
     texts = [c.text for c in chunks]
     embedder.fit(texts)
 
@@ -128,7 +126,7 @@ def main():
     store.build(embeddings, metadata)
     store.save()
 
-    # ── Summary ───────────────────────────────────────────────────────────────
+    #Summary 
     stats = store.stats()
     print("\n" + "="*60)
     print("  ✅ Ingestion Complete")
@@ -140,7 +138,6 @@ def main():
     print(f"\n  Run Streamlit UI: streamlit run app/streamlit_app.py")
     print("="*60)
 
-    # Save config for UI to pick up
     config = {
         "embedding_model": args.embedding_model,
         "embedding_dim": embedder.dim,
