@@ -13,9 +13,9 @@ SEC EDGAR PDFs
       ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                     INGESTION PIPELINE                          │
-│  PDF → Text Extraction → Chunking (600-800 tok) → Embedding    │
-│  (pdfplumber)           (overlap=150)             (TF-IDF+SVD  │
-│                                                    or MiniLM)  │
+│  PDF → Text Extraction → Chunking (600-800 tok) → Embedding     │
+│  (pdfplumber)           (overlap=150)             (TF-IDF+SVD   │
+│                                                    or MiniLM)   │
 └──────────────────────────────┬──────────────────────────────────┘
                                │
                                ▼
