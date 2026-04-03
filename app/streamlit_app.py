@@ -100,7 +100,7 @@ hr { border-color:#1E2937 !important; }
 """, unsafe_allow_html=True)
 
 
-# ── Helpers ───────────────────────────────────────────────────────────────────
+#Helpers
 
 def conf_badge(score: float) -> str:
     if score >= 0.75: return f'<span class="badge-high">✅ {score:.0%}</span>'
@@ -163,7 +163,7 @@ def render_sources(sources: list, label: str = "Sources"):
         for i, s in enumerate(sources, 1):
             contributed = ""
             chunk_scores = []
-            # check if chunk contributed
+            
             st.markdown(f"""
             <div style="border:1px solid #1E2937;border-radius:8px;padding:0.85rem;margin:0.4rem 0">
               <div style="font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:#475569;
@@ -189,7 +189,7 @@ def render_guardrail(g: dict):
                 unsafe_allow_html=True)
 
 
-# ── State ─────────────────────────────────────────────────────────────────────
+#State 
 
 def init():
     for k, v in {"store": None, "embedder": None, "rag": None,
@@ -201,7 +201,7 @@ def init():
 init()
 
 
-# ── Loaders ───────────────────────────────────────────────────────────────────
+#Loaders
 
 @st.cache_resource(show_spinner="Loading index…")
 def load_index(index_dir: str):
@@ -264,7 +264,7 @@ def ingest_uploads(files, index_dir="data/index"):
     return store, embedder, None
 
 
-# ── Sidebar ───────────────────────────────────────────────────────────────────
+#Sidebar 
 
 def sidebar():
     with st.sidebar:
@@ -316,13 +316,13 @@ def sidebar():
 
         st.divider()
 
-        # Settings
+        #Settings
         st.markdown("##### ⚙️ Settings")
         st.session_state.top_k = st.slider("Top-K chunks", 3, 10, 5)
         st.session_state.min_conf = st.slider("Min confidence threshold", 0.0, 0.5, 0.25, 0.05)
         st.session_state.strict_guard = st.checkbox("Strict guardrails", False)
 
-        # Doc filter
+        #Doc filter
         if st.session_state.index_loaded and st.session_state.store:
             st.divider()
             st.markdown("##### 🗂 Scope")
@@ -330,7 +330,7 @@ def sidebar():
             sel = st.selectbox("Filter to document", docs, label_visibility="collapsed")
             st.session_state.active_doc = None if sel == "All documents" else sel
 
-            # Quick stats
+            #Quick stats
             stats = st.session_state.store.stats()
             st.markdown(f"""
             <div style="font-family:'IBM Plex Mono',monospace;font-size:0.65rem;
@@ -341,7 +341,7 @@ def sidebar():
             </div>""", unsafe_allow_html=True)
 
 
-# ── Tab: Q&A ──────────────────────────────────────────────────────────────────
+#Tab: Q&A 
 
 SAMPLE_QS = [
     "What was total revenue and YoY growth?",
@@ -355,7 +355,7 @@ SAMPLE_QS = [
 def tab_qa():
     st.markdown("## 💬 Document Q&A")
 
-    # Sample buttons
+    #Sample buttons
     cols = st.columns(3)
     for i, q in enumerate(SAMPLE_QS):
         if cols[i % 3].button(q, key=f"sq_{i}", use_container_width=True):
@@ -398,23 +398,23 @@ def tab_qa():
           </div>
         </div>""", unsafe_allow_html=True)
 
-        # Guardrail first
+        #Guardrail first
         render_guardrail(r.get("guardrail", {}))
 
-        # Answer
+        #Answer
         if r.get("answer"):
             st.markdown(f'<div class="answer">{r["answer"]}</div>', unsafe_allow_html=True)
 
-        # Confidence
+        #Confidence
         if r.get("confidence"):
             render_confidence(r["confidence"])
 
-        # Sources
+        #Sources
         render_sources(r.get("sources", []))
         st.divider()
 
 
-# ── Tab: Summarize ────────────────────────────────────────────────────────────
+#Tab: Summarize 
 
 def tab_summarize():
     st.markdown("## 📝 Executive Summarization")
@@ -443,7 +443,7 @@ def tab_summarize():
         """, unsafe_allow_html=True)
 
 
-# ── Tab: Extract ──────────────────────────────────────────────────────────────
+#Tab: Extract 
 
 def tab_extract():
     st.markdown("## 🔬 Financial Metrics Extraction")
@@ -469,7 +469,7 @@ def tab_extract():
             st.code(result.get("raw_response", ""), language="text")
             return
 
-        # Header row
+        #Header row
         st.markdown(f"""
         <div style="display:flex;align-items:center;gap:10px;margin-bottom:1rem">
           <span style="font-family:'Syne',sans-serif;font-size:1.05rem;
@@ -482,7 +482,7 @@ def tab_extract():
                        color:#334155">data_confidence: {m.get('data_confidence','?')}</span>
         </div>""", unsafe_allow_html=True)
 
-        # KPI grid
+        #KPI grid
         fields = [
             ("revenue", "💰 Revenue"),
             ("net_income", "📈 Net Income"),
@@ -512,14 +512,14 @@ def tab_extract():
                     </div><br>""", unsafe_allow_html=True)
                 shown += 1
 
-        # Risks
+        #Risks
         risks = m.get("key_risks", [])
         if risks:
             st.markdown("**⚠️ Key Risks**")
             st.markdown("".join(f'<span class="rtag">{r}</span>' for r in risks),
                         unsafe_allow_html=True)
 
-        # Segments + Competitors
+        #Segments + Competitors
         col1, col2 = st.columns(2)
         with col1:
             segs = m.get("key_segments", [])
@@ -532,14 +532,14 @@ def tab_extract():
                 st.markdown("**⚔️ Competitors Mentioned**")
                 for c in comps: st.markdown(f"- `{c}`")
 
-        # Sources
+        #Sources
         render_sources(result.get("sources", []), "Evidence Chunks")
 
         with st.expander("🔍 Raw JSON"):
             st.json(m)
 
 
-# ── Tab: Compare ──────────────────────────────────────────────────────────────
+#Tab: Compare 
 
 COMPARE_ASPECTS = [
     "Revenue and profitability",
@@ -592,7 +592,7 @@ def tab_compare():
             render_sources(result.get("sources_b", []), f"Sources from {doc_b}")
 
 
-# ── Tab: Monitoring ───────────────────────────────────────────────────────────
+#Tab: Monitoring 
 
 def tab_monitor():
     st.markdown("## 📈 System Monitoring")
@@ -603,7 +603,7 @@ def tab_monitor():
     session = mon.session_metrics()
     events = mon.load_history(last_n=50)
 
-    # KPI row
+    #KPI row
     kpis = [
         (f"{session['total_queries']}", "Queries (Session)"),
         (f"{hist.get('avg_latency_ms', 0):.0f}ms", "Avg Latency"),
@@ -697,12 +697,12 @@ def tab_monitor():
             st.json(ev)
 
 
-# ── Main ──────────────────────────────────────────────────────────────────────
+#Main
 
 def main():
     sidebar()
 
-    # Auto-load
+    #Auto-load
     if not st.session_state.index_loaded and Path("data/index/faiss.index").exists():
         store, emb, ok = load_index("data/index")
         if ok:
@@ -710,7 +710,7 @@ def main():
             st.session_state.embedder = emb
             st.session_state.index_loaded = True
 
-    # Header
+    #Header
     index_status = ""
     if st.session_state.index_loaded and st.session_state.store:
         stats = st.session_state.store.stats()
