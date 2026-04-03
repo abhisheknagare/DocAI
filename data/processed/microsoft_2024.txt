@@ -1,0 +1,118 @@
+Microsoft Corporation 10-K Annual Report — Fiscal Year 2024
+United States Securities and Exchange Commission
+Washington, D.C. 20549
+
+ITEM 1. BUSINESS
+
+Microsoft Corporation enables digital transformation for the era of an intelligent cloud and an intelligent edge. Microsoft develops and supports a wide range of software products, services, devices, and solutions. The Company's fiscal year ends June 30.
+
+Microsoft's segments are: Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.
+
+PRODUCTIVITY AND BUSINESS PROCESSES
+
+This segment includes Microsoft 365 (formerly Office 365), Exchange, SharePoint, Microsoft Teams, LinkedIn, and Dynamics 365. Segment revenues were $77.5 billion in fiscal 2024, compared to $69.3 billion in fiscal 2023, an increase of 12%.
+
+Microsoft 365 Commercial cloud revenue grew 15% year-over-year, driven by continued expansion into enterprise customers and the integration of Copilot AI capabilities. Microsoft Teams has over 320 million monthly active users. LinkedIn revenue grew 10% with continued strength in Talent Solutions and Marketing Solutions.
+
+Dynamics 365, Microsoft's cloud-based ERP and CRM suite, grew 19% in fiscal 2024. The integration of Copilot AI assistant functionality across Dynamics 365 applications has been a significant growth driver.
+
+INTELLIGENT CLOUD
+
+This segment includes Azure, Windows Server, SQL Server, and GitHub. Segment revenues were $105.4 billion in fiscal 2024, compared to $87.9 billion in fiscal 2023, an increase of 20%.
+
+Azure and other cloud services grew 29% in fiscal 2024, accelerating from 27% growth in fiscal 2023. Azure AI services have become a critical growth driver, as organizations adopt generative AI capabilities. Microsoft's partnership with OpenAI provides exclusive access to GPT-4 class models through Azure OpenAI Service, which has seen rapid enterprise adoption.
+
+GitHub, acquired in 2018, reached 100 million developers in fiscal 2024. GitHub Copilot, the AI-powered coding assistant, has over 1.8 million paid subscribers across enterprise and individual plans.
+
+MORE PERSONAL COMPUTING
+
+This segment includes Windows OEM, Devices (Surface), Gaming (Xbox), and Search/News advertising (Bing). Segment revenues were $62.3 billion in fiscal 2024, compared to $54.7 billion in fiscal 2023, an increase of 14%.
+
+Gaming revenues grew 61% primarily due to the acquisition of Activision Blizzard, which was completed in October 2023 for approximately $75.4 billion. Xbox Game Pass has approximately 34 million subscribers.
+
+Search and news advertising revenues grew 12%, driven by AI-enhanced Bing and Edge market share gains following the integration of Copilot search capabilities.
+
+ITEM 1A. RISK FACTORS
+
+AI and Competitive Risk: The Company has made substantial investments in artificial intelligence, including its partnership with OpenAI and integration of Copilot features across products. There is no assurance these investments will generate expected returns. Competitors including Google, Amazon, Meta, and Apple are also investing heavily in AI capabilities. Failure to execute on AI strategy could result in market share loss and revenue underperformance.
+
+Cybersecurity Risk: In January 2024, the Company disclosed that a Russian state-sponsored threat actor known as Midnight Blizzard gained unauthorized access to a small percentage of Microsoft corporate email accounts. The Company has undertaken significant remediation efforts. Future cybersecurity incidents could damage the Company's reputation and result in significant financial loss.
+
+Regulatory Risk: The Company is subject to increasing regulatory scrutiny globally, including competition law investigations in Europe and the United States related to its cloud computing and AI practices. The Digital Markets Act in the European Union imposes obligations on designated gatekeepers. The Company's Activision Blizzard acquisition faced significant regulatory review.
+
+OpenAI Partnership Risk: The Company has invested approximately $13 billion in OpenAI and has an exclusive cloud partnership. Changes in the OpenAI partnership, including governance changes or competitive responses from OpenAI, could adversely impact the Company's AI strategy and Azure growth.
+
+Economic Sensitivity: A meaningful portion of the Company's revenue is derived from enterprise software subscriptions and cloud services. An economic downturn could cause customers to reduce IT spending, impacting renewal rates and new customer acquisition.
+
+ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS
+
+Fiscal Year 2024 Highlights
+
+Total revenue for fiscal 2024 was $245.1 billion, compared to $211.9 billion in fiscal 2023, an increase of 16%. This growth was driven by strong performance in Intelligent Cloud and continued strength in Productivity and Business Processes.
+
+Total gross margin was $171.0 billion in fiscal 2024, representing a gross margin of 69.8%, compared to $146.1 billion or 68.9% in fiscal 2023. The improvement in gross margin was primarily driven by the higher mix of cloud services revenue and economies of scale in cloud infrastructure.
+
+Operating income was $109.4 billion in fiscal 2024, compared to $88.5 billion in fiscal 2023, an increase of 24%. Operating margin expanded to 44.6% from 41.8% in fiscal 2023.
+
+Net income for fiscal 2024 was $88.1 billion, compared to $72.4 billion in fiscal 2023, an increase of 22%. Diluted earnings per share were $11.80, compared to $9.65 in fiscal 2023.
+
+Research and development expenses were $29.5 billion in fiscal 2024, compared to $27.2 billion in fiscal 2023, reflecting continued investment in AI, cloud infrastructure, and next-generation product capabilities.
+
+CAPITAL RETURN PROGRAM
+
+During fiscal 2024, the Company returned $34.6 billion to shareholders through share repurchases and dividends. The Company paid dividends of $3.00 per share in fiscal 2024. The Board of Directors approved a new share repurchase program of $60 billion in September 2023.
+
+ITEM 8. FINANCIAL STATEMENTS
+
+CONSOLIDATED INCOME STATEMENTS
+(In millions, except per share amounts)
+
+Revenue:
+  Productivity and Business Processes: $77,451
+  Intelligent Cloud: $105,361
+  More Personal Computing: $62,265
+Total revenue: $245,122
+
+Cost of revenue: $74,149
+Gross margin: $170,973
+Gross margin %: 69.8%
+
+Operating expenses:
+  Research and development: $29,510
+  Sales and marketing: $24,456
+  General and administrative: $7,607
+Total operating expenses: $61,573
+
+Operating income: $109,400
+Operating margin: 44.6%
+
+Other income, net: $3,269
+Income before income taxes: $112,669
+Provision for income taxes: $24,564
+Net income: $88,136
+
+Diluted earnings per share: $11.80
+
+Balance sheet highlights:
+  Cash and short-term investments: $75.5 billion
+  Total assets: $512.2 billion
+  Total debt: $79.6 billion
+  Stockholders' equity: $268.5 billion
+
+AZURE AND CLOUD SERVICES
+
+Azure infrastructure includes more than 60 announced regions globally, with 33 announced to come, which is more than any other cloud provider. Microsoft AI supercomputing infrastructure powers OpenAI training and inference at scale, as well as Microsoft's own Copilot services.
+
+Capital expenditures for fiscal 2024 were $55.7 billion, primarily for cloud and AI infrastructure including data center construction, servers, and networking equipment. The Company expects to continue significant capital investment to support AI and cloud growth.
+
+COPILOT ECOSYSTEM
+
+Microsoft 365 Copilot, launched broadly in November 2023, is available to enterprise customers at $30 per user per month. Early adoption has been strong among enterprise customers. Copilot for Microsoft 365 integrates GPT-4 and DALL-E models across Word, Excel, PowerPoint, Outlook, and Teams. GitHub Copilot Business is priced at $19 per user per month.
+
+ITEM 13. EXECUTIVE COMPENSATION
+
+Satya Nadella, Chairman and CEO, received total compensation of approximately $79.1 million in fiscal 2024, including base salary of $2.5 million, cash bonus of $10.7 million, and stock awards of $66.0 million.
+
+FORWARD-LOOKING STATEMENTS
+
+This Annual Report contains forward-looking statements. The words "believe," "expect," "anticipate," "intend," "estimate," "plan," "will," and similar expressions are intended to identify forward-looking statements. Actual results could differ materially from those projected in the forward-looking statements.

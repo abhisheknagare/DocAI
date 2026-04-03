@@ -1,0 +1,90 @@
+Tesla, Inc. 10-K Annual Report — Fiscal Year 2024
+United States Securities and Exchange Commission
+
+ITEM 1. BUSINESS
+
+Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, energy generation and storage systems, and related products and services. The Company also offers vehicle service, charging infrastructure, and full self-driving capability software. Tesla was incorporated in Delaware in July 2003.
+
+Tesla's mission is to accelerate the world's transition to sustainable energy. To achieve this mission, the Company has designed and deployed a vertically integrated energy and transportation ecosystem.
+
+AUTOMOTIVE SEGMENT
+
+The Company's automotive segment includes the design, development, manufacturing, leasing, and sale of electric vehicles. The Company currently manufactures the Model 3, Model Y, Model S, Model X, and Cybertruck. Model Y is the Company's highest volume vehicle.
+
+In fiscal year 2024, total automotive revenues were $77.1 billion, compared to $82.4 billion in fiscal year 2023, a decrease of approximately 6%. The decrease was primarily driven by average selling price reductions as the Company prioritized volume and expanded into new markets.
+
+The Company delivered approximately 1,789,226 vehicles in fiscal year 2024, compared to 1,808,581 deliveries in fiscal year 2023.
+
+ENERGY GENERATION AND STORAGE SEGMENT
+
+The Energy Generation and Storage segment includes the design, manufacture, installation, sale, and leasing of solar energy systems, Powerwall, Megapack, and related products. Energy revenues were $10.1 billion in fiscal 2024, compared to $6.0 billion in fiscal 2023, representing 68% growth driven primarily by Megapack deployments.
+
+SERVICES AND OTHER
+
+Services and Other revenues were $10.1 billion in fiscal 2024, compared to $8.3 billion in fiscal 2023. This segment includes non-warranty after-sales vehicle services, body shop and parts, paid Supercharging, retail merchandise, and insurance.
+
+ITEM 1A. RISK FACTORS
+
+Competition Risk: The electric vehicle market is intensely competitive, with significant and well-resourced competitors including traditional automotive companies as well as new EV-focused entrants. BYD, Volkswagen Group, General Motors, Ford, and Hyundai/Kia have all significantly increased their EV production capacity and market share.
+
+Pricing Pressure Risk: The Company has reduced vehicle prices significantly over recent periods. Continued pricing pressure from competitors may require further reductions, compressing automotive gross margins. In fiscal 2024, automotive gross margin excluding regulatory credits was approximately 14.6%.
+
+Autonomous Driving Risk: The Company's Full Self-Driving capabilities are subject to extensive regulatory scrutiny and have been involved in several investigations by the National Highway Traffic Safety Administration (NHTSA). Adverse regulatory decisions could require product recalls or curtail deployment.
+
+Execution Risk on New Products: The Company's growth depends substantially on successful development and production of next-generation vehicles, including the planned lower-cost compact vehicle expected in 2025, and the Robotaxi. Delays or cost overruns would adversely impact financial results.
+
+Energy Cost Risk: The Company's Gigafactories consume substantial electricity. Increases in electricity costs or restrictions on energy availability could increase manufacturing costs. The Company operates Gigafactories in Austin (Texas), Fremont (California), Berlin (Germany), and Shanghai (China).
+
+Geopolitical and Trade Risk: Approximately 23% of the Company's revenues originated in China in fiscal 2024. Tariffs, trade restrictions, or regulatory actions by Chinese authorities could significantly impair the Company's operations and financial results.
+
+ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS
+
+Total revenues for fiscal year 2024 were $97.7 billion, compared to $96.8 billion in fiscal year 2023, an increase of approximately 1%. Total gross profit was $17.8 billion in fiscal 2024, representing a gross margin of 18.2%, compared to a gross margin of 18.2% in fiscal 2023.
+
+Total operating expenses were $11.6 billion in fiscal 2024, compared to $8.8 billion in fiscal 2023, primarily due to increased research and development expenses related to next-generation vehicle development and AI/robotics initiatives.
+
+Net income attributable to common stockholders was $7.1 billion in fiscal 2024, compared to $15.0 billion in fiscal 2023. The decrease in net income was primarily driven by lower automotive margins, higher operating expenses, and reduced interest income. Diluted earnings per share were $2.04 in fiscal 2024, compared to $4.30 in fiscal 2023.
+
+Research and development expenses were $4.5 billion in fiscal 2024, compared to $3.97 billion in fiscal 2023, primarily related to development of the next generation vehicle platform, Full Self-Driving capabilities, the Optimus humanoid robot, and AI infrastructure including the Dojo supercomputer.
+
+ITEM 8. FINANCIAL STATEMENTS
+
+CONSOLIDATED STATEMENTS OF OPERATIONS
+(In millions)
+
+Automotive revenues: $77,119
+Energy generation and storage revenues: $10,077  
+Services and other revenues: $10,121
+Total revenues: $97,317
+
+Cost of revenues:
+  Automotive: $63,880
+  Energy generation and storage: $7,277
+  Services and other: $8,374
+Total cost of revenues: $79,531
+
+Total gross profit: $17,786
+Gross margin: 18.3%
+
+Operating expenses:
+  Research and development: $4,543
+  Selling, general and administrative: $5,023
+  Restructuring and other: $510
+Total operating expenses: $10,076
+
+Operating income: $7,710
+Total other income: $1,018
+Income before income taxes: $8,728
+Net income: $7,091
+
+Earnings per share, diluted: $2.04
+
+Cash and cash equivalents and investments: $36.6 billion
+
+SUPERCHARGER NETWORK
+
+As of December 31, 2024, the Company operated over 6,500 Supercharger stations globally with over 63,000 connectors, making it the world's largest fast-charging network. Tesla has opened its Supercharger network to other electric vehicle brands in North America and Europe.
+
+AUTOPILOT AND FULL SELF-DRIVING
+
+As of December 31, 2024, the Company had accumulated more than 5 billion miles of Autopilot data. Full Self-Driving (Supervised) capability is available through a subscription at $99/month or a one-time purchase of $8,000. The Company is working toward deploying an unsupervised FSD capability and launching a Robotaxi service.

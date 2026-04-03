@@ -1,0 +1,9 @@
+data/raw/
+data/index/
+data/cache/
+data/monitoring/
+__pycache__/
+*.pyc
+.env
+*.pkl
+*.index
