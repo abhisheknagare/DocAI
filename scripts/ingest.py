@@ -47,9 +47,7 @@ def parse_args():
 
 def main():
     args = parse_args()
-    print("\n" + "="*60)
     print("  Financial RAG Ingestion Pipeline")
-    print("="*60)
 
     #Step 1: Download
     if not args.skip_download:
@@ -92,7 +90,7 @@ def main():
             overwrite=args.overwrite,
         )
         if not chunks:
-            print("  ⚠ No chunks created. Check that text files exist in data/processed/")
+            print("  No chunks created. Check that text files exist in data/processed/")
             sys.exit(1)
     else:
         print("\n[3/4] SKIPPING CHUNKING (--skip-chunk)")
@@ -128,9 +126,7 @@ def main():
 
     #Summary 
     stats = store.stats()
-    print("\n" + "="*60)
-    print("  ✅ Ingestion Complete")
-    print("="*60)
+    print("Ingestion Complete")
     print(f"  Vectors indexed : {stats['total_vectors']:,}")
     print(f"  Documents       : {stats['documents']}")
     print(f"  Embedding dim   : {stats['dim']}")
