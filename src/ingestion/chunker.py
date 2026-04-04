@@ -1,9 +1,3 @@
-"""
-Text Chunker
-Splits extracted text into overlapping chunks for embedding.
-Attaches rich metadata to each chunk for source citation.
-"""
-
 import re
 import json
 import os
@@ -14,22 +8,21 @@ from dataclasses import dataclass, asdict
 
 @dataclass
 class Chunk:
-    chunk_id: str          # unique ID: {doc_id}__{chunk_idx}
-    doc_id: str            # source document identifier
-    filename: str          # original filename
-    company: str           # inferred company name
-    text: str              # chunk text content
-    chunk_index: int       # position in document
-    total_chunks: int      # total chunks from this doc
-    char_start: int        # character offset start in full doc
-    char_end: int          # character offset end in full doc
-    section: str           # inferred section (Risk Factors, MD&A, etc.)
+    chunk_id: str          
+    doc_id: str            
+    filename: str          
+    company: str          
+    text: str              
+    chunk_index: int       
+    total_chunks: int     
+    char_start: int        
+    char_end: int         
+    section: str           
 
     def to_dict(self) -> dict:
         return asdict(self)
 
 
-# Sections that appear in 10-K filings
 SECTION_PATTERNS = {
     "Business Overview": r"(item\s*1[.\s]|business overview|about.*company)",
     "Risk Factors": r"(item\s*1a[.\s]|risk factor)",
@@ -44,7 +37,7 @@ SECTION_PATTERNS = {
 
 
 def _infer_section(text: str) -> str:
-    """Guess the 10-K section from chunk text."""
+    
     lower = text[:500].lower()
     for section, pattern in SECTION_PATTERNS.items():
         if re.search(pattern, lower, re.IGNORECASE):
@@ -53,7 +46,7 @@ def _infer_section(text: str) -> str:
 
 
 def _infer_company(filename: str) -> str:
-    """Infer company name from filename."""
+    
     name = Path(filename).stem.lower()
     mapping = {
         "apple": "Apple Inc.",
@@ -83,33 +76,18 @@ def chunk_text(
     chunk_size: int = 800,
     overlap: int = 150,
 ) -> list[Chunk]:
-    """
-    Split text into overlapping chunks.
-
-    Args:
-        text: Full document text.
-        doc_id: Unique document identifier.
-        filename: Original filename for display.
-        chunk_size: Target characters per chunk (~200 tokens).
-        overlap: Overlap between consecutive chunks.
-
-    Returns:
-        List of Chunk objects with metadata.
-    """
+    
     company = _infer_company(filename)
     chunks = []
     start = 0
     idx = 0
 
-    # Pre-count total chunks estimate
     total_est = max(1, (len(text) - overlap) // (chunk_size - overlap))
 
     while start < len(text):
         end = min(start + chunk_size, len(text))
 
-        # Try to break at sentence boundary
         if end < len(text):
-            # Look for a sentence end within last 200 chars of this chunk
             boundary = text.rfind(". ", end - 200, end)
             if boundary > start + chunk_size // 2:
                 end = boundary + 1
@@ -135,7 +113,6 @@ def chunk_text(
         start = end - overlap
         idx += 1
 
-    # Update total_chunks now that we know the real count
     for c in chunks:
         c.total_chunks = len(chunks)
 
@@ -149,11 +126,7 @@ def chunk_directory(
     overlap: int = 150,
     overwrite: bool = False,
 ) -> list[Chunk]:
-    """
-    Chunk all .txt files in input_dir.
-    Saves {doc_id}_chunks.jsonl to output_dir.
-    Returns all chunks across all documents.
-    """
+    
     os.makedirs(output_dir, exist_ok=True)
     all_chunks = []
 
@@ -166,7 +139,6 @@ def chunk_directory(
 
         if out_path.exists() and not overwrite:
             print(f"  Skip (exists): {out_path.name}")
-            # Load cached
             with open(out_path) as f:
                 for line in f:
                     d = json.loads(line)
@@ -195,7 +167,6 @@ def chunk_directory(
 
 
 def load_chunks(chunk_dir: str) -> list[Chunk]:
-    """Load all chunks from a directory of .jsonl files."""
     chunks = []
     for fpath in Path(chunk_dir).glob("*_chunks.jsonl"):
         with open(fpath) as f:
