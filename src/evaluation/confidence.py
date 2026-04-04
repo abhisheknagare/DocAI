@@ -1,15 +1,3 @@
-"""
-Confidence Scoring
-Computes multi-dimensional confidence scores for every RAG response:
-
-  1. Retrieval Confidence  — how well the top-k chunks match the query
-  2. Coverage Score        — how many of top-k chunks are high-quality
-  3. Groundedness Score    — how much the answer is grounded in the context
-  4. Overall Confidence    — weighted combination of all signals
-
-Each score is in [0.0, 1.0]. Signals are fully explainable.
-"""
-
 import re
 import math
 import numpy as np
@@ -19,17 +7,15 @@ from typing import Optional
 
 @dataclass
 class ConfidenceResult:
-    # Component scores
-    retrieval_confidence: float      # Avg cosine similarity of top-k chunks
-    coverage_score: float            # % chunks above quality threshold
-    groundedness_score: float        # Lexical + semantic answer-context overlap
-    consistency_score: float         # Agreement across chunks on topic
-    overall_confidence: float        # Weighted composite
+  
+    retrieval_confidence: float      
+    coverage_score: float            
+    groundedness_score: float        
+    consistency_score: float         
+    overall_confidence: float        
 
-    # Per-chunk detail
     chunk_scores: list[dict] = field(default_factory=list)
 
-    # Human-readable verdict
     verdict: str = ""
     explanation: str = ""
 
@@ -46,10 +32,9 @@ class ConfidenceResult:
         }
 
 
-# ── Lexical Groundedness ──────────────────────────────────────────────────────
+#Lexical Groundedness
 
 def _tokenize(text: str) -> set[str]:
-    """Simple unigram tokenizer, lowercased, stopwords removed."""
     STOP = {
         "the","a","an","is","are","was","were","be","been","being",
         "have","has","had","do","does","did","will","would","could","should",
@@ -64,7 +49,7 @@ def _tokenize(text: str) -> set[str]:
 
 
 def _f1_overlap(answer: str, context: str) -> float:
-    """Token F1 between answer tokens and context tokens."""
+  
     a_toks = _tokenize(answer)
     c_toks = _tokenize(context)
     if not a_toks or not c_toks:
@@ -78,10 +63,7 @@ def _f1_overlap(answer: str, context: str) -> float:
 
 
 def _sentence_overlap(answer: str, context: str, min_len: int = 5) -> float:
-    """
-    Fraction of answer sentences that have significant lexical overlap
-    with at least one sentence in the context.
-    """
+    
     a_sents = [s.strip() for s in re.split(r"[.!?]", answer) if len(s.strip()) > min_len]
     c_sents = [s.strip() for s in re.split(r"[.!?]", context) if len(s.strip()) > min_len]
     if not a_sents:
@@ -94,31 +76,18 @@ def _sentence_overlap(answer: str, context: str, min_len: int = 5) -> float:
 
 
 def _number_coverage(answer: str, context: str) -> float:
-    """
-    What fraction of numbers/percentages mentioned in the answer
-    also appear in the retrieved context? (financial accuracy signal)
-    """
+    
     num_pattern = r"\$[\d,.]+[BMKbmk]?|\b\d+\.?\d*%|\b\d{4}\b|\b\d+\.?\d*\s?(?:billion|million|trillion)\b"
     a_nums = set(re.findall(num_pattern, answer, re.IGNORECASE))
     c_nums = set(re.findall(num_pattern, context, re.IGNORECASE))
     if not a_nums:
-        return 1.0   # No numbers to verify — neutral
+        return 1.0   
     covered = a_nums & c_nums
     return len(covered) / len(a_nums)
 
 
-# ── Main Scorer ───────────────────────────────────────────────────────────────
-
 class ConfidenceScorer:
-    """
-    Scores the confidence and groundedness of a RAG response.
-
-    Usage:
-        scorer = ConfidenceScorer()
-        result = scorer.score(query, answer, retrieved_results)
-    """
-
-    # Weights for overall confidence
+    
     WEIGHTS = {
         "retrieval": 0.30,
         "coverage": 0.20,
@@ -126,14 +95,13 @@ class ConfidenceScorer:
         "consistency": 0.15,
     }
 
-    # Retrieval score threshold to count as "high quality"
     HIGH_QUALITY_THRESHOLD = 0.55
 
     def score(
         self,
         query: str,
         answer: str,
-        retrieved_results: list,   # list of SearchResult objects
+        retrieved_results: list,   
         query_vec: Optional[np.ndarray] = None,
     ) -> ConfidenceResult:
         """
@@ -161,37 +129,26 @@ class ConfidenceScorer:
 
         raw_scores = [r.score for r in retrieved_results]
 
-        # ── 1. Retrieval Confidence ───────────────────────────────────────────
-        # Normalize cosine similarity (inner product for L2-normalized vecs)
-        # Typical range for good matches: 0.7–1.0, bad: 0.3–0.5
         retrieval_conf = float(np.mean(raw_scores))
-        # Normalize to [0,1]: 0.3 → 0.0, 1.0 → 1.0
         retrieval_norm = max(0.0, min(1.0, (retrieval_conf - 0.3) / 0.7))
 
-        # ── 2. Coverage Score ─────────────────────────────────────────────────
-        # What fraction of retrieved chunks are above quality threshold?
         high_quality = sum(1 for s in raw_scores if s >= self.HIGH_QUALITY_THRESHOLD)
         coverage = high_quality / len(raw_scores)
 
-        # ── 3. Groundedness Score ─────────────────────────────────────────────
-        # How much of the answer is grounded in retrieved context?
         full_context = " ".join(r.text for r in retrieved_results)
 
         f1 = _f1_overlap(answer, full_context)
         sent_overlap = _sentence_overlap(answer, full_context)
         num_coverage = _number_coverage(answer, full_context)
 
-        # "I don't know" or refusal → high groundedness (model is being honest)
         if any(phrase in answer.lower() for phrase in [
             "don't contain", "not available", "not mentioned",
             "cannot find", "no information"
         ]):
-            groundedness = 0.85  # Honest refusal is grounded behavior
+            groundedness = 0.85  
         else:
             groundedness = 0.45 * sent_overlap + 0.30 * f1 + 0.25 * num_coverage
 
-        # ── 4. Consistency Score ──────────────────────────────────────────────
-        # Do retrieved chunks agree on topic? Measure pairwise overlap.
         if len(retrieved_results) >= 2:
             pair_overlaps = []
             for i in range(len(retrieved_results)):
@@ -200,14 +157,12 @@ class ConfidenceScorer:
                         _f1_overlap(retrieved_results[i].text, retrieved_results[j].text)
                     )
             consistency = float(np.mean(pair_overlaps)) if pair_overlaps else 0.5
-            # Some overlap is good (same topic), too much = redundant chunks
-            # Optimal: 0.2–0.5 overlap. Normalize accordingly.
+            
             consistency = 1.0 - abs(consistency - 0.3) / 0.3
             consistency = max(0.0, min(1.0, consistency))
         else:
-            consistency = 0.5  # Neutral with single chunk
+            consistency = 0.5  
 
-        # ── Overall ───────────────────────────────────────────────────────────
         overall = (
             self.WEIGHTS["retrieval"] * retrieval_norm
             + self.WEIGHTS["coverage"] * coverage
@@ -216,7 +171,6 @@ class ConfidenceScorer:
         )
         overall = max(0.0, min(1.0, overall))
 
-        # ── Per-chunk scores ──────────────────────────────────────────────────
         chunk_scores = []
         for r in retrieved_results:
             chunk_f1 = _f1_overlap(answer, r.text)
@@ -229,7 +183,6 @@ class ConfidenceScorer:
                 "contributed": chunk_f1 > 0.15,
             })
 
-        # ── Verdict ───────────────────────────────────────────────────────────
         verdict, explanation = self._interpret(overall, retrieval_norm, groundedness, raw_scores)
 
         return ConfidenceResult(
