@@ -1,8 +1,3 @@
-"""
-PDF / HTM Text Extractor
-Converts SEC filings (PDF or HTML) into clean plain text.
-"""
-
 import re
 import os
 import json
@@ -10,24 +5,17 @@ from pathlib import Path
 from typing import Optional
 import pdfplumber
 
-
-# ── helpers ──────────────────────────────────────────────────────────────────
-
 def _clean_text(text: str) -> str:
-    """Remove noise common in SEC filings."""
-    # Collapse excessive whitespace
+    
     text = re.sub(r"[ \t]{2,}", " ", text)
-    # Collapse many blank lines
     text = re.sub(r"\n{3,}", "\n\n", text)
-    # Remove page-break artifacts
     text = re.sub(r"(Table of Contents\n?)+", "", text, flags=re.IGNORECASE)
-    # Remove isolated single characters (table noise)
     text = re.sub(r"(?<!\w)\.(?!\w)", "", text)
     return text.strip()
 
 
 def extract_pdf(path: str) -> str:
-    """Extract text from a PDF file using pdfplumber."""
+    
     pages_text = []
     with pdfplumber.open(path) as pdf:
         for page in pdf.pages:
@@ -38,7 +26,7 @@ def extract_pdf(path: str) -> str:
 
 
 def extract_htm(path: str) -> str:
-    """Extract text from an HTM/HTML SEC filing."""
+    
     try:
         from html.parser import HTMLParser
 
@@ -74,10 +62,7 @@ def extract_htm(path: str) -> str:
 
 
 def extract_file(path: str) -> Optional[str]:
-    """
-    Auto-detect file type and extract text.
-    Returns None if extraction fails.
-    """
+   
     ext = Path(path).suffix.lower()
     try:
         if ext == ".pdf":
@@ -103,11 +88,7 @@ def extract_directory(
     output_dir: str,
     overwrite: bool = False,
 ) -> list[dict]:
-    """
-    Extract text from all PDFs/HTMs in input_dir.
-    Saves .txt files to output_dir.
-    Returns list of metadata dicts.
-    """
+    
     os.makedirs(output_dir, exist_ok=True)
     results = []
 
@@ -145,7 +126,7 @@ def extract_directory(
                     "status": "ok",
                 }
             )
-            print(f"    ✓ {len(text):,} chars → {out_name}")
+            print(f"    {len(text):,} chars → {out_name}")
         else:
             results.append(
                 {"source": str(fpath), "output": None, "status": "failed"}
