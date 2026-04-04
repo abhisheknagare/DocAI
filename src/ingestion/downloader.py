@@ -1,8 +1,3 @@
-"""
-SEC EDGAR Downloader
-Downloads 10-K and 10-Q filings as PDFs from SEC EDGAR.
-"""
-
 import os
 import time
 import json
@@ -19,7 +14,6 @@ HEADERS = {
     "Host": "data.sec.gov",
 }
 
-# CIK numbers for popular companies
 COMPANY_CIKS = {
     "apple": "0000320193",
     "tesla": "0001318605",
@@ -32,7 +26,7 @@ COMPANY_CIKS = {
 
 
 def get_company_filings(cik: str, form_type: str = "10-K", limit: int = 3) -> list[dict]:
-    """Fetch recent filings metadata from SEC EDGAR."""
+
     url = f"{EDGAR_BASE}/submissions/CIK{cik}.json"
     r = requests.get(url, headers=HEADERS, timeout=20)
     r.raise_for_status()
@@ -57,7 +51,7 @@ def get_company_filings(cik: str, form_type: str = "10-K", limit: int = 3) -> li
 
 
 def get_filing_documents(cik: str, acc_path: str) -> list[dict]:
-    """Get list of documents in a filing."""
+   
     url = f"{EDGAR_BASE}/Archives/edgar/data/{cik.lstrip('0')}/{acc_path}/index.json"
     r = requests.get(url, headers=HEADERS, timeout=20)
     r.raise_for_status()
@@ -68,11 +62,10 @@ def get_filing_documents(cik: str, acc_path: str) -> list[dict]:
 def download_filing_pdf(
     cik: str, acc_path: str, documents: list[dict], output_dir: str
 ) -> Optional[str]:
-    """Download the primary PDF or HTM document from a filing."""
+    
     os.makedirs(output_dir, exist_ok=True)
     cik_bare = cik.lstrip("0")
 
-    # Prefer PDF, then HTM
     for ext in [".pdf", ".htm", ".html"]:
         for doc in documents:
             name = doc.get("name", "")
@@ -89,7 +82,7 @@ def download_filing_pdf(
                     for chunk in r.iter_content(chunk_size=8192):
                         f.write(chunk)
                 print(f"  Downloaded: {dest}")
-                time.sleep(0.5)  # EDGAR rate limit courtesy
+                time.sleep(0.5)  
                 return dest
     return None
 
@@ -100,12 +93,7 @@ def download_company_filings(
     form_type: str = "10-K",
     limit: int = 2,
 ) -> list[str]:
-    """
-    Main entry point: download filings for a named company.
-
-    Usage:
-        paths = download_company_filings("apple", "data/raw", limit=2)
-    """
+    
     cik = COMPANY_CIKS.get(company_name.lower())
     if not cik:
         raise ValueError(
