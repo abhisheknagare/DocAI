@@ -1,40 +1,18 @@
-"""
-Guardrails Module
-Provides input validation and output quality checks for the RAG pipeline.
-
-Input Guardrails:
-  - Off-topic detection (non-financial queries)
-  - Prompt injection detection
-  - Query length / quality check
-
-Output Guardrails:
-  - Hallucination flag (answer contains facts not in context)
-  - Low-confidence block (auto-refuse if confidence too low)
-  - Refusal passthrough (model said "I don't know" → honor it)
-"""
-
 import re
 from dataclasses import dataclass
 from typing import Optional
-
-
-# ── Schemas ───────────────────────────────────────────────────────────────────
 
 @dataclass
 class GuardrailCheck:
     passed: bool
     triggered: bool
-    guardrail_type: Optional[str]   # "off_topic" | "injection" | "low_confidence" | "hallucination" | "empty_query"
-    message: str                    # User-facing explanation
-    severity: str                   # "block" | "warn" | "pass"
+    guardrail_type: Optional[str]   #"off_topic" | "injection" | "low_confidence" | "hallucination" | "empty_query"
+    message: str                    #User-facing explanation
+    severity: str                   #"block" | "warn" | "pass"
 
 
 PASS = GuardrailCheck(passed=True, triggered=False, guardrail_type=None, message="", severity="pass")
 
-
-# ── Input Guardrails ──────────────────────────────────────────────────────────
-
-# Keywords that strongly indicate a financial/business query
 FINANCIAL_KEYWORDS = {
     "revenue", "sales", "income", "profit", "loss", "earnings", "ebitda",
     "margin", "cash", "debt", "equity", "assets", "liabilities", "balance",
@@ -49,7 +27,6 @@ FINANCIAL_KEYWORDS = {
     "cloud", "subscription", "customer", "competition", "competitor",
 }
 
-# Phrases that strongly suggest off-topic (non-financial) queries
 OFF_TOPIC_PATTERNS = [
     r"\b(recipe|cook|food|restaurant|meal|diet|nutrition)\b",
     r"\b(movie|film|music|song|album|artist|celebrity|actor)\b",
@@ -61,7 +38,6 @@ OFF_TOPIC_PATTERNS = [
     r"\b(medical|doctor|prescription|symptom|disease|hospital)\b",
 ]
 
-# Prompt injection patterns
 INJECTION_PATTERNS = [
     r"ignore (previous|all|your) instructions",
     r"disregard (the|your) (system|context|prompt)",
@@ -75,19 +51,9 @@ INJECTION_PATTERNS = [
 
 
 def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
-    """
-    Validate a user query before processing.
-
-    Args:
-        query: Raw user input.
-        strict_mode: If True, requires financial keywords (blocks vague queries).
-
-    Returns:
-        GuardrailCheck — passes through most queries, blocks clear violations.
-    """
+    
     query_lower = query.lower().strip()
 
-    # Empty / too short
     if len(query_lower) < 5:
         return GuardrailCheck(
             passed=False, triggered=True,
@@ -96,7 +62,6 @@ def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
             severity="block",
         )
 
-    # Too long (likely injection or abuse)
     if len(query) > 2000:
         return GuardrailCheck(
             passed=False, triggered=True,
@@ -105,7 +70,6 @@ def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
             severity="block",
         )
 
-    # Prompt injection
     for pattern in INJECTION_PATTERNS:
         if re.search(pattern, query_lower, re.IGNORECASE):
             return GuardrailCheck(
@@ -115,7 +79,6 @@ def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
                 severity="block",
             )
 
-    # Off-topic check
     has_off_topic = any(re.search(p, query_lower) for p in OFF_TOPIC_PATTERNS)
     has_financial = any(kw in query_lower for kw in FINANCIAL_KEYWORDS)
 
@@ -131,7 +94,6 @@ def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
             severity="block",
         )
 
-    # Strict mode: require at least some financial relevance
     if strict_mode and not has_financial:
         return GuardrailCheck(
             passed=True, triggered=True,
@@ -146,10 +108,6 @@ def check_input(query: str, strict_mode: bool = False) -> GuardrailCheck:
 
     return PASS
 
-
-# ── Output Guardrails ─────────────────────────────────────────────────────────
-
-# Phrases the model uses when it genuinely lacks context — these are GOOD
 HONEST_REFUSAL_PHRASES = [
     "the provided documents don't contain",
     "not mentioned in the",
@@ -161,7 +119,6 @@ HONEST_REFUSAL_PHRASES = [
     "i cannot determine",
 ]
 
-# Phrases that might indicate hallucination or over-confidence
 SPECULATION_PHRASES = [
     r"\bprobably\b",
     r"\blikely\b",
@@ -176,7 +133,6 @@ SPECULATION_PHRASES = [
     r"\btypically\b",
 ]
 
-# Numbers in the answer that should ideally appear in context too
 NUMBER_PATTERN = r"\$[\d,.]+[BMKbmk]?|\b\d+\.?\d*\s?(?:billion|million|trillion|percent|%)\b"
 
 
@@ -187,22 +143,9 @@ def check_output(
     min_confidence: float = 0.30,
     warn_confidence: float = 0.50,
 ) -> GuardrailCheck:
-    """
-    Validate a generated answer before returning to user.
-
-    Args:
-        answer: LLM-generated answer.
-        context: Retrieved context that was provided to the LLM.
-        confidence_score: Overall confidence from ConfidenceScorer.
-        min_confidence: Below this → block with refusal message.
-        warn_confidence: Below this → pass but attach warning.
-
-    Returns:
-        GuardrailCheck result.
-    """
+    
     answer_lower = answer.lower()
 
-    # Honest refusal — always pass through
     if any(phrase in answer_lower for phrase in HONEST_REFUSAL_PHRASES):
         return GuardrailCheck(
             passed=True, triggered=False,
@@ -211,7 +154,6 @@ def check_output(
             severity="pass",
         )
 
-    # Very low confidence — block
     if confidence_score < min_confidence:
         return GuardrailCheck(
             passed=False, triggered=True,
@@ -225,7 +167,6 @@ def check_output(
             severity="block",
         )
 
-    # Hallucination signal: numbers in answer not in context
     answer_nums = set(re.findall(NUMBER_PATTERN, answer, re.IGNORECASE))
     context_nums = set(re.findall(NUMBER_PATTERN, context, re.IGNORECASE))
     if answer_nums:
@@ -243,7 +184,6 @@ def check_output(
                 severity="warn",
             )
 
-    # Speculation language warning
     speculation_count = sum(
         1 for p in SPECULATION_PHRASES
         if re.search(p, answer_lower)
@@ -259,7 +199,6 @@ def check_output(
             severity="warn",
         )
 
-    # Low confidence warning (but not blocked)
     if confidence_score < warn_confidence:
         return GuardrailCheck(
             passed=True, triggered=True,
@@ -276,7 +215,6 @@ def check_output(
 
 
 class Guardrails:
-    """Convenience wrapper combining input and output guardrails."""
 
     def __init__(
         self,
