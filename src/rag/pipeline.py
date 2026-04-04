@@ -1,8 +1,3 @@
-"""
-Enhanced RAG Pipeline — Full Production Version
-Integrates: Retrieval | Generation | Confidence | Guardrails | Monitoring | Cache
-"""
-
 import os, json, time, hashlib
 import anthropic
 from typing import Optional
@@ -84,10 +79,6 @@ class ResponseCache:
 
 
 class FinancialRAG:
-    """
-    Production RAG pipeline for SEC filing analysis.
-    All responses include: answer + sources + confidence breakdown + guardrail status.
-    """
 
     def __init__(self, vector_store, embedder, model="claude-sonnet-4-20250514",
                  top_k=5, use_cache=True, cache_dir="data/cache",
@@ -129,7 +120,6 @@ class FinancialRAG:
     def qa(self, query: str, doc_id: Optional[str] = None) -> dict:
         t0 = time.time()
 
-        # Input guardrail
         ig = self.guardrails.check_input(query)
         if not ig.passed:
             latency_ms = (time.time() - t0) * 1000
@@ -142,7 +132,6 @@ class FinancialRAG:
                     "cached": False, "mode": "qa", "latency_ms": round(latency_ms, 1)}
             
 
-        # Cache
         if self.cache:
             c = self.cache.get(query, "qa", doc_id)
             if c:
@@ -154,7 +143,6 @@ class FinancialRAG:
                 self._log(query, "qa", latency_ms, True, [], c.get("answer",""), dummy_conf, dummy_guard, doc_id)
                 return c
 
-        # Retrieve
         qv = self.embedder.embed_query(query)
         results = self.vector_store.search(qv, top_k=self.top_k, filter_doc_id=doc_id)
         if not results:
@@ -166,7 +154,6 @@ class FinancialRAG:
         answer = self._claude(QA_SYSTEM_PROMPT,
             f"CONTEXT FROM SEC FILINGS:\n{ctx}\n\nQUESTION: {query}\n\nAnswer strictly from context above.", 1000)
 
-        # Score + output guardrail
         conf = self.scorer.score(query, answer, results, qv)
         og = self.guardrails.check_output(answer, ctx, conf.overall_confidence)
         if not og.passed:
