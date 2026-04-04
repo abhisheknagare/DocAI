@@ -1,11 +1,3 @@
-"""
-Monitoring Module
-Tracks query latency, retrieval quality, cache performance, and
-generates a real-time dashboard of RAG system health metrics.
-
-All events are appended to a JSONL log file for persistence.
-"""
-
 import os
 import json
 import time
@@ -17,14 +9,12 @@ from typing import Optional
 from collections import defaultdict
 
 
-# ── Event Schema ──────────────────────────────────────────────────────────────
-
 @dataclass
 class QueryEvent:
     event_id: str
     timestamp: str
     query: str
-    mode: str                      # "qa" | "summarize" | "extract" | "compare"
+    mode: str                      
     doc_id: Optional[str]
     latency_ms: float
     cached: bool
@@ -32,10 +22,10 @@ class QueryEvent:
     top_retrieval_score: float
     mean_retrieval_score: float
     answer_length: int
-    confidence_score: float        # 0–1
-    groundedness_score: float      # 0–1
+    confidence_score: float        
+    groundedness_score: float     
     guardrail_triggered: bool
-    guardrail_type: Optional[str]  # "off_topic" | "low_confidence" | "hallucination"
+    guardrail_type: Optional[str]  #"off_topic" | "low_confidence" | "hallucination"
     model: str
 
     def to_dict(self) -> dict:
@@ -54,21 +44,14 @@ class SessionStats:
     retrieval_scores: list = field(default_factory=list)
 
 
-# ── Monitor ───────────────────────────────────────────────────────────────────
-
 class RAGMonitor:
-    """
-    Logs all RAG query events and exposes aggregated metrics.
-    Thread-safe append-only JSONL log.
-    """
-
+   
     def __init__(self, log_dir: str = "data/monitoring"):
         self.log_dir = Path(log_dir)
         self.log_dir.mkdir(parents=True, exist_ok=True)
         self.log_path = self.log_dir / "query_log.jsonl"
         self._session = SessionStats()
 
-    # ── Logging ───────────────────────────────────────────────────────────────
 
     def log(self, event: QueryEvent):
         """Append event to log file and update in-memory session stats."""
@@ -122,10 +105,8 @@ class RAGMonitor:
             model=model,
         )
 
-    # ── Analytics ─────────────────────────────────────────────────────────────
-
     def load_history(self, last_n: int = 200) -> list[dict]:
-        """Load last N events from log file."""
+    
         if not self.log_path.exists():
             return []
         events = []
@@ -138,7 +119,7 @@ class RAGMonitor:
         return events[-last_n:]
 
     def session_metrics(self) -> dict:
-        """Real-time metrics from current session."""
+        
         s = self._session
         n = max(s.total_queries, 1)
         return {
@@ -153,7 +134,7 @@ class RAGMonitor:
         }
 
     def historical_metrics(self, hours: int = 24) -> dict:
-        """Aggregate metrics from log file for the last N hours."""
+        
         events = self.load_history(last_n=1000)
         if not events:
             return {}
@@ -188,7 +169,7 @@ class RAGMonitor:
         }
 
     def query_trends(self, bucket_hours: int = 1, num_buckets: int = 24) -> list[dict]:
-        """Return time-bucketed query counts for plotting."""
+        
         events = self.load_history(last_n=2000)
         buckets = []
         now = datetime.utcnow()
@@ -214,7 +195,7 @@ class RAGMonitor:
         return buckets
 
     def top_queries(self, n: int = 10) -> list[dict]:
-        """Most frequently asked queries."""
+       
         events = self.load_history(last_n=500)
         counts = defaultdict(int)
         for e in events:
@@ -222,8 +203,6 @@ class RAGMonitor:
         sorted_q = sorted(counts.items(), key=lambda x: x[1], reverse=True)
         return [{"query": q, "count": c} for q, c in sorted_q[:n]]
 
-
-# ── Singleton ─────────────────────────────────────────────────────────────────
 
 _monitor: Optional[RAGMonitor] = None
 
