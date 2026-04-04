@@ -1,9 +1,3 @@
-"""
-FAISS Vector Store
-Stores, persists, and retrieves chunk embeddings using FAISS.
-Supports inner-product (cosine-equivalent with L2-normalized vectors) search.
-"""
-
 import os
 import json
 import numpy as np
@@ -40,12 +34,6 @@ class SearchResult:
 
 
 class FAISSVectorStore:
-    """
-    FAISS-backed vector store with metadata persistence.
-
-    Index type: IndexFlatIP (exact inner-product search)
-    All vectors must be L2-normalized before insertion (cosine similarity).
-    """
 
     def __init__(self, dim: int, index_dir: str = "data/index"):
         self.dim = dim
@@ -53,22 +41,15 @@ class FAISSVectorStore:
         self.index_dir.mkdir(parents=True, exist_ok=True)
 
         self._index: Optional[faiss.Index] = None
-        self._metadata: list[dict] = []   # parallel to FAISS index rows
+        self._metadata: list[dict] = []   
         self._id_to_row: dict[str, int] = {}
 
         self._index_path = self.index_dir / "faiss.index"
         self._meta_path = self.index_dir / "metadata.jsonl"
 
-    # ── Build ──────────────────────────────────────────────────────────────────
 
     def build(self, embeddings: np.ndarray, metadata: list[dict]):
-        """
-        Build a fresh FAISS index from embeddings.
-
-        Args:
-            embeddings: (N, dim) float32 array, L2-normalized.
-            metadata: N dicts with chunk metadata.
-        """
+        
         assert len(embeddings) == len(metadata), "Length mismatch"
         assert embeddings.dtype == np.float32, "Need float32"
 
@@ -80,7 +61,6 @@ class FAISSVectorStore:
         print(f"  ✓ Built FAISS index: {self._index.ntotal} vectors, dim={self.dim}")
 
     def add(self, embeddings: np.ndarray, metadata: list[dict]):
-        """Add vectors incrementally (after initial build)."""
         if self._index is None:
             self.build(embeddings, metadata)
             return
@@ -90,18 +70,15 @@ class FAISSVectorStore:
             self._metadata.append(m)
             self._id_to_row[m["chunk_id"]] = start + i
 
-    # ── Persist ────────────────────────────────────────────────────────────────
 
     def save(self):
-        """Persist index and metadata to disk."""
         faiss.write_index(self._index, str(self._index_path))
         with open(self._meta_path, "w") as f:
             for m in self._metadata:
                 f.write(json.dumps(m) + "\n")
-        print(f"  ✓ Saved index: {self._index.ntotal} vectors → {self.index_dir}")
+        print(f"   Saved index: {self._index.ntotal} vectors → {self.index_dir}")
 
     def load(self) -> bool:
-        """Load index and metadata from disk. Returns True if successful."""
         if not self._index_path.exists() or not self._meta_path.exists():
             return False
         self._index = faiss.read_index(str(self._index_path))
@@ -110,7 +87,7 @@ class FAISSVectorStore:
             for line in f:
                 self._metadata.append(json.loads(line))
         self._id_to_row = {m["chunk_id"]: i for i, m in enumerate(self._metadata)}
-        print(f"  ✓ Loaded index: {self._index.ntotal} vectors from {self.index_dir}")
+        print(f"   Loaded index: {self._index.ntotal} vectors from {self.index_dir}")
         return True
 
     @property
@@ -126,7 +103,6 @@ class FAISSVectorStore:
         """List of unique document IDs in the index."""
         return list({m["doc_id"] for m in self._metadata})
 
-    # ── Search ─────────────────────────────────────────────────────────────────
 
     def search(
         self,
@@ -134,22 +110,11 @@ class FAISSVectorStore:
         top_k: int = 5,
         filter_doc_id: Optional[str] = None,
     ) -> list[SearchResult]:
-        """
-        Search for top-k most similar chunks.
-
-        Args:
-            query_vec: (dim,) float32 query embedding.
-            top_k: Number of results to return.
-            filter_doc_id: Restrict results to a single document.
-
-        Returns:
-            List of SearchResult objects, sorted by score desc.
-        """
+        
         if not self.is_ready:
             raise RuntimeError("Vector store not initialized. Run ingestion first.")
 
         q = query_vec.reshape(1, -1).astype(np.float32)
-        # Fetch extra results if filtering to a doc
         fetch_k = top_k * 5 if filter_doc_id else top_k
 
         scores, indices = self._index.search(q, min(fetch_k, self._index.ntotal))
@@ -180,7 +145,6 @@ class FAISSVectorStore:
         return results
 
     def get_document_chunks(self, doc_id: str, max_chunks: int = 50) -> list[dict]:
-        """Return all chunks for a specific document, ordered by chunk_index."""
         chunks = [
             m for m in self._metadata
             if m["doc_id"] == doc_id
