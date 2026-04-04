@@ -1,8 +1,3 @@
-"""
-Embedder — TF-IDF + Truncated SVD
-Loads a pre-fitted model from disk for consistent train/query embeddings.
-Upgrades automatically to sentence-transformers if installed.
-"""
 import pickle
 import numpy as np
 from pathlib import Path
@@ -10,11 +5,6 @@ from typing import Union, Optional
 
 
 class Embedder:
-    """
-    Wraps either:
-      - A pre-fitted TF-IDF + SVD pipeline (default, no GPU needed)
-      - sentence-transformers all-MiniLM (if installed)
-    """
 
     def __init__(self, model_path: str = "data/index/tfidf.pkl",
                  prefer_transformers: bool = False):
